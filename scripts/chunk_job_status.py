@@ -35,6 +35,19 @@ def pick_latest_chunk_job(root: Path):
     return candidates[0][1]
 
 
+def derive_needs_user_action_items(report: dict):
+    explicit = report.get("needs_user_action_items")
+    if explicit:
+        return explicit
+    derived = []
+    for item in report.get("success_items", []) or []:
+        unresolved = item.get("unresolved") or []
+        status = str(item.get("status") or "")
+        if unresolved or status == "needs_user_confirmation":
+            derived.append(item)
+    return derived
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--workdir")
@@ -77,13 +90,41 @@ def main():
         else:
             progress_text = f"Job state is {state.get('state')}."
 
-    needs_user_action_count = int(report.get("needs_user_action_count") or 0)
+    needs_user_action_items = derive_needs_user_action_items(report)
+    needs_user_action_count = len(needs_user_action_items)
+    needs_user_action_preview = []
+    for item in needs_user_action_items[:10]:
+        needs_user_action_preview.append({
+            "record_index": item.get("record_index"),
+            "request_no": item.get("request_no"),
+            "bill_number": item.get("bill_number"),
+            "unresolved": item.get("unresolved") or [],
+            "match_file": item.get("match_file"),
+        })
     auto_continue_ready = (
         (summary.get("state") or state.get("state")) == "WAIT_NEXT_BATCH"
         and not running
         and int(report.get("failed_count") or 0) == 0
         and needs_user_action_count == 0
     )
+    final_submit_allowed = (
+        (summary.get("state") or state.get("state")) == "WAIT_CONFIRMATION"
+        and int(report.get("failed_count") or 0) == 0
+        and needs_user_action_count == 0
+    )
+    if (summary.get("state") or state.get("state")) == "WAIT_CONFIRMATION" and needs_user_action_count > 0:
+        progress_text = (
+            f"All batches are prepared, but {needs_user_action_count} record(s) still need user confirmation "
+            "before final submit."
+        )
+    elif final_submit_allowed:
+        progress_text = "All batches are prepared. No unresolved items remain. Final submit confirmation is now allowed."
+
+    next_action = summary.get("next_action")
+    if (summary.get("state") or state.get("state")) == "WAIT_CONFIRMATION" and needs_user_action_count > 0:
+        next_action = "resolve_user_confirmation_items"
+    elif final_submit_allowed:
+        next_action = "wait_for_final_submit_confirmation"
 
     out = {
         "ok": True,
@@ -93,12 +134,14 @@ def main():
         "completed_batches": summary.get("completed_batches", 0),
         "total_batches": summary.get("total_batches", 0),
         "next_batch_index": summary.get("next_batch_index", 0),
-        "next_action": summary.get("next_action"),
+        "next_action": next_action,
         "progress_text": progress_text,
         "success_count": report.get("success_count"),
         "failed_count": report.get("failed_count"),
         "pending_count": report.get("pending_count"),
         "needs_user_action_count": needs_user_action_count,
+        "needs_user_action_preview": needs_user_action_preview,
+        "final_submit_allowed": final_submit_allowed,
         "can_auto_continue": report.get("can_auto_continue"),
         "auto_continue_ready": auto_continue_ready,
         "failure_reason_summary": report.get("failure_reason_summary") or {},

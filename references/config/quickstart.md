@@ -62,6 +62,8 @@ Notes:
   - If rows exceed `--chunk-size`, workflow auto-splits into batch workdirs and may exit at `WAIT_NEXT_BATCH`.
   - If a processed batch has no unresolved items and no failures, chunk driver auto-resumes the next batch after 10 seconds.
   - If a processed batch has unresolved items or failures, chunk driver stops at `WAIT_NEXT_BATCH` for user input.
+  - If status output has `needs_user_action_count > 0`, agent must list those items first and must not ask for final submit confirmation yet.
+  - Final submit confirmation is only allowed when status output has `final_submit_allowed = true`.
   - Chunk job progress files:
     - `workflow_state.json`
     - `chunk_job_summary.json`

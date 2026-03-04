@@ -137,6 +137,11 @@ python scripts/suggest_from_bill_rules.py --parsed <parsed.json> --bill-rules <b
     - then `python skills/adv-qbo-tool/scripts/resume_chunk_job.py`
   - If the user asks `状态` / `进度`, use:
     - `python skills/adv-qbo-tool/scripts/chunk_job_status.py`
+  - If chunk-job status shows `needs_user_action_count > 0` or `next_action = resolve_user_confirmation_items`:
+    - do not say “确认后继续提交 S4/S5”
+    - list the affected record indexes / request numbers / unresolved fields first
+    - ask the user to fill or confirm those items
+  - Only when chunk-job status shows `final_submit_allowed = true` may you ask for the final submit confirmation.
   - After execution, summarize:
     - success count/list
     - failed count/list

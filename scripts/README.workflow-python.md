@@ -67,6 +67,11 @@ Notes:
 - `--max-batches-per-run 1` is the safe setting for Telegram-triggered runs; `0` means process all remaining batches in one invocation.
 - If a batch finishes with no unresolved items and no failures, background driver auto-resumes the next batch after `--auto-continue-seconds` (default `10`).
 - If a batch finishes with unresolved items or failures, the job stops at `WAIT_NEXT_BATCH` and waits for explicit user input.
+- `chunk_job_status.py` now exposes:
+  - `needs_user_action_count`
+  - `needs_user_action_preview`
+  - `final_submit_allowed`
+- Chat/Telegram layer should only ask for final submit confirmation when `final_submit_allowed = true`.
 - Chunk-job progress is written to:
   - `workflow_state.json`
   - `chunk_job_summary.json`
