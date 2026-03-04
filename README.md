@@ -15,6 +15,13 @@ Use the Python workflow entrypoint:
 python scripts/workflow.py --file <uploaded.xlsx> --bill-rules <bill_rules.json> --dir <workdir>
 ```
 
+For large Excel files, keep each invocation bounded and resumable:
+```bash
+python scripts/start_chunk_job.py --file <uploaded.xlsx> --bill-rules <bill_rules.json> --chunk-size 10 --max-batches-per-run 1
+python scripts/resume_chunk_job.py
+python scripts/retry_failed_chunk_job.py
+```
+
 ## Local config
 For Collector connectivity, copy and adapt:
 

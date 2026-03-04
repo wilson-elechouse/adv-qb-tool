@@ -45,12 +45,28 @@ Notes:
   - If unresolved fields have no alternatives and bill-rules are available, renderer exits with `suggestion_render_incomplete`.
 - Deterministic workflow state machine (only entry):
   - `python skills/adv-qbo-tool/scripts/workflow.py --file <uploaded.xlsx> --bill-rules <bill_rules.json> --dir <workdir> --chunk-size 10`
+  - For chat-safe start, prefer:
+    - `python skills/adv-qbo-tool/scripts/start_chunk_job.py --file <uploaded.xlsx> --bill-rules <bill_rules.json> --chunk-size 10 --max-batches-per-run 1`
+  - For large Excel files, prefer bounded runs:
+    - `python skills/adv-qbo-tool/scripts/start_chunk_job.py --file <uploaded.xlsx> --bill-rules <bill_rules.json> --chunk-size 10 --max-batches-per-run 1`
+    - Continue same job:
+      - `python skills/adv-qbo-tool/scripts/resume_chunk_job.py`
+    - Or resume the most recent waiting chunk job:
+      - `python skills/adv-qbo-tool/scripts/resume_chunk_job.py`
   - Optional manual snapshot priority: `--manual-rules-snapshot <rules_cache/bill-rules.YYYYMMDD-HHMMSS.json>`
   - Optional TTL refresh control: `--rules-ttl-seconds 21600` (default 6h)
   - Rules priority in workflow: `manual_snapshot > rules_cache/latest.json > input --bill-rules`
   - Default AI bridge is built-in (`scripts/ai_bridge.py`) via `references/config/ai-runtime.json`.
   - Uses fixed states: `S1_PARSE_IDENTIFY -> S2_MATCH_BUILD -> S3_CONFIRM_RENDER -> S4_UPLOAD -> S5_DONE`.
   - If not confirmed, exits at `WAIT_CONFIRMATION` with `confirmation_recap.json`.
+  - If rows exceed `--chunk-size`, workflow auto-splits into batch workdirs and may exit at `WAIT_NEXT_BATCH`.
+  - Chunk job progress files:
+    - `workflow_state.json`
+    - `chunk_job_summary.json`
+    - `chunk_job_report.json`
+    - `python skills/adv-qbo-tool/scripts/chunk_job_status.py`
+    - Retry failed records only:
+      - `python skills/adv-qbo-tool/scripts/retry_failed_chunk_job.py`
   - `node scripts/run_workflow.mjs` is blocked and must not be used.
   - Direct calls to `build_match_result` / `build_match_batch` / `render_confirmation_recap` / `submit_from_match_result` are locked unless `--via-workflow true` is provided by the orchestrator.
 - Step-4 upload (single-source path):

@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 import argparse
+import copy
 import hashlib
 import json
 import os
 import subprocess
+import sys
 import time
 from datetime import datetime
 from pathlib import Path
@@ -93,12 +95,423 @@ def is_ttl_expired(path: Path, ttl_seconds: int):
     return age > max(0, ttl_seconds)
 
 
+def parse_uploaded_file(file_path: Path, out_path: Path):
+    run([
+        "python", "skills/adv-qbo-tool/scripts/parse_payment_request_xlsx.py",
+        "--file", str(file_path),
+        "--out", str(out_path),
+    ])
+    parsed = read_json(out_path)
+    if not parsed.get("ok"):
+        raise RuntimeError(f"parse_failed:{parsed.get('error','unknown')}")
+    return parsed
+
+
+def chunk_records(records, chunk_size: int):
+    size = max(1, int(chunk_size))
+    return [records[i:i + size] for i in range(0, len(records), size)]
+
+
+def build_chunk_parse(parsed_obj, chunk_records_list, chunk_index: int, total_chunks: int, source_parse_path: Path):
+    chunk_obj = copy.deepcopy(parsed_obj)
+    first_record = (chunk_records_list or [{}])[0] or {}
+    chunk_obj["recap"] = copy.deepcopy(first_record.get("recap") or parsed_obj.get("recap") or {})
+    chunk_obj["records"] = copy.deepcopy(chunk_records_list)
+    chunk_obj["missing_required"] = copy.deepcopy(first_record.get("missing_required") or chunk_obj.get("missing_required") or [])
+    rows = copy.deepcopy(chunk_obj.get("rows") or {})
+    rows["approved_in_chunk"] = len(chunk_records_list)
+    rows["chunk_size"] = len(chunk_records_list)
+    rows["chunk_index"] = chunk_index + 1
+    rows["total_chunks"] = total_chunks
+    chunk_obj["rows"] = rows
+    chunk_obj["chunk"] = {
+        "index": chunk_index + 1,
+        "total": total_chunks,
+        "size": len(chunk_records_list),
+        "record_index_start": (chunk_records_list[0].get("record_index") if chunk_records_list else None),
+        "record_index_end": (chunk_records_list[-1].get("record_index") if chunk_records_list else None),
+    }
+    chunk_obj["source_parse_result"] = str(source_parse_path.resolve())
+    return chunk_obj
+
+
+def build_record_brief(record):
+    recap = (record or {}).get("recap") or {}
+    return {
+        "record_index": record.get("record_index"),
+        "vendor": recap.get("vendor", ""),
+        "bill_number": recap.get("bill_number", ""),
+        "request_no": recap.get("request_no", ""),
+        "bill_date": recap.get("bill_date", ""),
+        "due_date": recap.get("due_date", ""),
+        "business_reason": recap.get("reason", ""),
+    }
+
+
+def build_record_lookup(parsed):
+    lookup = {}
+    for record in parsed.get("records") or []:
+        try:
+            lookup[int(record.get("record_index", 0))] = record
+        except Exception:
+            continue
+    return lookup
+
+
+def build_chunk_job_report(path: Path, state, parsed):
+    record_lookup = build_record_lookup(parsed)
+    success_items = []
+    failed_items = []
+    pending_items = []
+
+    def record_meta(record_index):
+        rec = record_lookup.get(int(record_index), {"record_index": record_index, "recap": {}})
+        return build_record_brief(rec)
+
+    for batch in state.get("batches", []):
+        if not batch:
+            continue
+        batch_state = str(batch.get("state") or "")
+        batch_workdir = Path(batch.get("workdir") or "")
+        record_indexes = [int(x) for x in (batch.get("record_indexes") or []) if x is not None]
+
+        if batch_state == "ERROR":
+            for ridx in record_indexes:
+                failed_items.append({
+                    **record_meta(ridx),
+                    "batch_index": batch.get("batch_index"),
+                    "stage": "workflow",
+                    "status": "failed",
+                    "reason": batch.get("error") or "batch_error",
+                })
+            continue
+
+        submit_path = batch_workdir / "batch" / "batch_submit_result.json"
+        if submit_path.exists():
+            try:
+                submit_obj = read_json(submit_path)
+                for item in submit_obj.get("results", []):
+                    ridx = int(item.get("record_index", 0))
+                    base = {
+                        **record_meta(ridx),
+                        "batch_index": batch.get("batch_index"),
+                        "stage": "submit",
+                    }
+                    if item.get("ok"):
+                        success_items.append({
+                            **base,
+                            "status": "submitted",
+                            "submission_id": item.get("submission_id"),
+                            "view_url": item.get("view_url"),
+                        })
+                    else:
+                        failed_items.append({
+                            **base,
+                            "status": "failed",
+                            "reason": item.get("error") or "submit_failed",
+                            "action_required": item.get("action_required"),
+                            "message": item.get("message"),
+                            "existing_submission_id": item.get("existing_submission_id"),
+                            "existing_view_url": item.get("existing_view_url"),
+                        })
+                continue
+            except Exception:
+                pass
+
+        batch_summary_path = batch_workdir / "batch" / "batch_match_summary.json"
+        if batch_summary_path.exists():
+            try:
+                batch_summary = read_json(batch_summary_path)
+                for item in batch_summary.get("results", []):
+                    ridx = int(item.get("record_index", 0))
+                    success_items.append({
+                        **record_meta(ridx),
+                        "batch_index": batch.get("batch_index"),
+                        "stage": "prepare",
+                        "status": item.get("status") or batch_state.lower(),
+                        "match_file": item.get("match_file"),
+                        "unresolved": item.get("unresolved") or [],
+                    })
+                continue
+            except Exception:
+                pass
+
+        for ridx in record_indexes:
+            pending_items.append({
+                **record_meta(ridx),
+                "batch_index": batch.get("batch_index"),
+                "stage": "chunk_job",
+                "status": "pending",
+                "reason": "batch_not_processed_yet",
+            })
+
+    processed_record_indexes = {
+        int(item["record_index"])
+        for item in [*success_items, *failed_items, *pending_items]
+        if item.get("record_index") is not None
+    }
+    for ridx, record in record_lookup.items():
+        if ridx not in processed_record_indexes:
+            pending_items.append({
+                **build_record_brief(record),
+                "batch_index": None,
+                "stage": "chunk_job",
+                "status": "pending",
+                "reason": "not_processed_yet",
+            })
+
+    failure_reason_summary = {}
+    for item in failed_items:
+        reason = str(item.get("reason") or "unknown_failure")
+        failure_reason_summary[reason] = failure_reason_summary.get(reason, 0) + 1
+
+    report = {
+        "ok": state.get("state") != "ERROR",
+        "mode": "chunked_job_report",
+        "job_state": state.get("state"),
+        "total_records": len(record_lookup),
+        "success_count": len(success_items),
+        "failed_count": len(failed_items),
+        "pending_count": len(pending_items),
+        "failure_reason_summary": failure_reason_summary,
+        "success_items": success_items,
+        "failed_items": failed_items,
+        "pending_items": pending_items,
+        "retry_hint": "python skills/adv-qbo-tool/scripts/retry_failed_chunk_job.py",
+    }
+    write_json(path, report)
+    return report
+
+
+def write_chunk_job_summary(path: Path, state):
+    progress = state.get("progress") or {}
+    batches = []
+    last_batch = None
+    for item in state.get("batches", []):
+        if item:
+            last_batch = item
+        batches.append({
+            "batch_index": item.get("batch_index"),
+            "record_count": item.get("record_count"),
+            "record_indexes": item.get("record_indexes"),
+            "state": item.get("state"),
+            "workdir": item.get("workdir"),
+            "state_file": item.get("state_file"),
+            "recap": item.get("recap"),
+            "submit_result": item.get("submit_result"),
+            "error": item.get("error"),
+        })
+    progress_text = (
+        f"Processed {progress.get('completed_batches', 0)}/{progress.get('total_batches', 0)} batches"
+        f" ({progress.get('total_records', 0)} records total)."
+    )
+    if state.get("state") == "WAIT_NEXT_BATCH":
+        progress_text += " Resume to continue the next batch."
+    elif state.get("state") == "WAIT_CONFIRMATION":
+        progress_text += " All batches are prepared and waiting for confirmation."
+    elif state.get("state") == "DONE":
+        progress_text += " All batches are completed."
+    summary = {
+        "ok": state.get("state") != "ERROR",
+        "mode": "chunked_job",
+        "state": state.get("state"),
+        "total_records": progress.get("total_records", 0),
+        "total_batches": progress.get("total_batches", 0),
+        "completed_batches": progress.get("completed_batches", 0),
+        "next_batch_index": progress.get("next_batch_index", 0),
+        "processed_batches_in_run": progress.get("processed_batches_in_run", 0),
+        "last_completed_batch": {
+            "batch_index": (last_batch or {}).get("batch_index"),
+            "record_indexes": (last_batch or {}).get("record_indexes"),
+            "recap": (last_batch or {}).get("recap"),
+            "state": (last_batch or {}).get("state"),
+        } if last_batch else None,
+        "progress_text": progress_text,
+        "batches": batches,
+        "next_action": (
+            "resume_next_batch"
+            if state.get("state") == "WAIT_NEXT_BATCH"
+            else ("wait_for_user_confirmation" if state.get("state") == "WAIT_CONFIRMATION" else "done")
+        ),
+    }
+    write_json(path, summary)
+    return summary
+
+
+def maybe_run_chunk_job(args, workdir: Path, state_path: Path, state, parsed, parse_out: Path, ai_cmd: str):
+    records = parsed.get("records") or []
+    chunk_size = max(1, int(args.chunk_size))
+    if args.parsed or len(records) <= chunk_size:
+        return False
+
+    chunks = chunk_records(records, chunk_size)
+    total_batches = len(chunks)
+    chunk_root = workdir / "chunks"
+    chunk_root.mkdir(parents=True, exist_ok=True)
+    summary_path = workdir / "chunk_job_summary.json"
+    report_path = workdir / "chunk_job_report.json"
+
+    existing = {}
+    if args.resume and state_path.exists():
+        try:
+            prev = read_json(state_path)
+            if prev.get("mode") == "chunked_job":
+                existing = prev
+        except Exception:
+            existing = {}
+
+    if existing:
+        state = existing
+    else:
+        state["mode"] = "chunked_job"
+        state["artifacts"]["parse_result"] = str(parse_out.resolve())
+        state["artifacts"]["chunk_root"] = str(chunk_root.resolve())
+        state["artifacts"]["chunk_job_summary"] = str(summary_path.resolve())
+        state["artifacts"]["chunk_job_report"] = str(report_path.resolve())
+        state["batches"] = []
+
+    state["inputs"]["file"] = str(Path(args.file).resolve())
+    state["inputs"]["bill_rules"] = str(Path(args.bill_rules).resolve())
+    state["inputs"]["config"] = str(Path(args.config).resolve()) if args.config else None
+    state["flags"]["confirmed"] = bool(args.confirmed)
+    state["flags"]["resume"] = bool(args.resume)
+
+    progress = state.get("progress") or {}
+    next_batch_index = int(progress.get("next_batch_index", 0)) if existing else 0
+    completed_batches = int(progress.get("completed_batches", 0)) if existing else 0
+    batches_meta = list(state.get("batches") or [])
+    if len(batches_meta) < total_batches:
+        batches_meta.extend({} for _ in range(total_batches - len(batches_meta)))
+    state["batches"] = batches_meta
+    state["progress"] = {
+        "total_records": len(records),
+        "total_batches": total_batches,
+        "completed_batches": completed_batches,
+        "next_batch_index": next_batch_index,
+        "processed_batches_in_run": 0,
+    }
+    state["state"] = "CHUNK_JOB_RUNNING"
+    write_json(state_path, state)
+
+    remaining = max(0, total_batches - next_batch_index)
+    max_batches = int(args.max_batches_per_run)
+    batches_this_run = remaining if max_batches <= 0 else min(remaining, max(1, max_batches))
+    end_batch_index = next_batch_index + batches_this_run
+
+    for batch_idx in range(next_batch_index, end_batch_index):
+        batch_records = chunks[batch_idx]
+        batch_dir = chunk_root / f"batch-{batch_idx + 1:03d}"
+        batch_dir.mkdir(parents=True, exist_ok=True)
+        batch_parse = batch_dir / "parse_result.chunk.json"
+        write_json(batch_parse, build_chunk_parse(parsed, batch_records, batch_idx, total_batches, parse_out))
+
+        batch_cmd = [
+            sys.executable,
+            str(Path(__file__).resolve()),
+            "--parsed", str(batch_parse.resolve()),
+            "--bill-rules", str(Path(args.bill_rules).resolve()),
+            "--dir", str(batch_dir.resolve()),
+            "--chunk-size", str(chunk_size),
+            "--ai-cmd", ai_cmd,
+            "--ai-runtime-config", args.ai_runtime_config,
+            "--auto-threshold", str(args.auto_threshold),
+            "--confirm-threshold", str(args.confirm_threshold),
+        ]
+        if args.config:
+            batch_cmd += ["--config", str(Path(args.config).resolve())]
+        if args.history:
+            batch_cmd += ["--history", args.history]
+        if args.rules_cache_dir:
+            batch_cmd += ["--rules-cache-dir", args.rules_cache_dir]
+        if args.manual_rules_snapshot:
+            batch_cmd += ["--manual-rules-snapshot", args.manual_rules_snapshot]
+        if args.confirmed:
+            batch_cmd.append("--confirmed")
+
+        batch_state_path = batch_dir / "workflow_state.json"
+        batch_error = None
+        batch_result = {}
+        try:
+            batch_raw = run(batch_cmd)
+            batch_result = parse_json_output(batch_raw)
+        except Exception as e:
+            batch_error = str(e)
+        batch_state = read_json(batch_state_path) if batch_state_path.exists() else {}
+        batch_entry = {
+            "batch_index": batch_idx + 1,
+            "record_count": len(batch_records),
+            "record_indexes": [r.get("record_index") for r in batch_records],
+            "workdir": str(batch_dir.resolve()),
+            "parsed": str(batch_parse.resolve()),
+            "state_file": str(batch_state_path.resolve()),
+            "state": batch_state.get("state") or ("ERROR" if batch_error else (batch_result.get("state") or "UNKNOWN")),
+            "recap": batch_result.get("recap") or (batch_state.get("artifacts") or {}).get("confirmation_recap"),
+            "submit_result": batch_result.get("submit_result") or (batch_state.get("artifacts") or {}).get("batch_submit_result"),
+            "error": batch_state.get("error") or batch_error,
+        }
+        state["batches"][batch_idx] = batch_entry
+        state["progress"]["completed_batches"] = batch_idx + 1
+        state["progress"]["next_batch_index"] = batch_idx + 1
+        state["progress"]["processed_batches_in_run"] = batch_idx + 1 - next_batch_index
+        state["metrics"]["chunk_job"] = {
+            "chunk_size": chunk_size,
+            "processed_batches_in_run": state["progress"]["processed_batches_in_run"],
+            "completed_batches": state["progress"]["completed_batches"],
+            "total_batches": total_batches,
+            "total_records": len(records),
+        }
+        write_json(state_path, state)
+        write_chunk_job_summary(summary_path, state)
+        build_chunk_job_report(report_path, state, parsed)
+
+        if batch_entry["state"] == "ERROR":
+            state["state"] = "ERROR"
+            state["error"] = batch_entry["error"] or f"chunk_batch_failed:{batch_idx + 1}"
+            write_json(state_path, state)
+            write_chunk_job_summary(summary_path, state)
+            build_chunk_job_report(report_path, state, parsed)
+            raise RuntimeError(state["error"])
+
+    completed_batches = int(state["progress"]["completed_batches"])
+    state["state"] = "DONE" if args.confirmed else "WAIT_CONFIRMATION"
+    if completed_batches < total_batches:
+        state["state"] = "WAIT_NEXT_BATCH"
+    write_json(state_path, state)
+    summary = write_chunk_job_summary(summary_path, state)
+    report = build_chunk_job_report(report_path, state, parsed)
+    last_batch = summary.get("last_completed_batch") or {}
+
+    print(json.dumps({
+        "ok": True,
+        "mode": "chunked_job",
+        "state": state["state"],
+        "state_file": str(state_path.resolve()),
+        "job_summary": str(summary_path.resolve()),
+        "job_report": str(report_path.resolve()),
+        "completed_batches": completed_batches,
+        "total_batches": total_batches,
+        "next_batch_index": state["progress"]["next_batch_index"],
+        "processed_batches_in_run": state["progress"]["processed_batches_in_run"],
+        "last_completed_batch_index": last_batch.get("batch_index"),
+        "last_batch_recap": last_batch.get("recap"),
+        "progress_text": summary.get("progress_text"),
+        "success_count": report.get("success_count"),
+        "failed_count": report.get("failed_count"),
+        "pending_count": report.get("pending_count"),
+        "next_action": summary.get("next_action"),
+    }, ensure_ascii=False, indent=2))
+    return True
+
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--file", required=True)
+    ap.add_argument("--file")
+    ap.add_argument("--parsed", help="optional parse_result.json input; skips S1 parsing")
     ap.add_argument("--bill-rules", required=True)
     ap.add_argument("--dir", required=True)
     ap.add_argument("--chunk-size", type=int, default=10)
+    ap.add_argument("--max-batches-per-run", type=int, default=1, help="when source rows exceed chunk-size, process at most N batches per invocation; 0 means all")
+    ap.add_argument("--resume", action="store_true", help="resume a previously split chunk job in the same --dir")
     ap.add_argument("--confirmed", action="store_true")
     ap.add_argument("--config")
     ap.add_argument("--ai-cmd", help="AI command for Step2 category judge (optional if configured in ai-runtime.json or OPENCLAW_AI_CMD)")
@@ -110,6 +523,8 @@ def main():
     ap.add_argument("--rules-ttl-seconds", type=int, default=21600, help="auto refresh ttl for latest rules snapshot")
     ap.add_argument("--manual-rules-snapshot", help="manual snapshot path with highest priority")
     args = ap.parse_args()
+    if bool(args.file) == bool(args.parsed):
+        raise RuntimeError("exactly_one_of_file_or_parsed_required")
 
     workdir = Path(args.dir).resolve()
     workdir.mkdir(parents=True, exist_ok=True)
@@ -133,9 +548,16 @@ def main():
     state = {
         "state": "S1_PARSE_IDENTIFY",
         "inputs": {
-            "file": str(Path(args.file).resolve()),
+            "file": str(Path(args.file).resolve()) if args.file else None,
+            "parsed": str(Path(args.parsed).resolve()) if args.parsed else None,
             "bill_rules": str(Path(args.bill_rules).resolve()),
             "config": str(Path(args.config).resolve()) if args.config else None,
+            "chunk_size": int(args.chunk_size),
+            "max_batches_per_run": int(args.max_batches_per_run),
+            "resume": bool(args.resume),
+            "history": args.history,
+            "ai_runtime_config": args.ai_runtime_config,
+            "ai_cmd": ai_cmd,
             "manual_rules_snapshot": str(Path(args.manual_rules_snapshot).resolve()) if args.manual_rules_snapshot else None,
             "rules_cache_dir": str(cache_root),
         },
@@ -147,17 +569,20 @@ def main():
 
     try:
         # S1
-        parse_out = workdir / "parse_result.json"
-        run([
-            "python", "skills/adv-qbo-tool/scripts/parse_payment_request_xlsx.py",
-            "--file", state["inputs"]["file"],
-            "--out", str(parse_out),
-        ])
-        parsed = read_json(parse_out)
-        if not parsed.get("ok"):
-            raise RuntimeError(f"parse_failed:{parsed.get('error','unknown')}")
+        if args.parsed:
+            parse_out = Path(args.parsed).resolve()
+            parsed = read_json(parse_out)
+            if not parsed.get("ok"):
+                raise RuntimeError(f"parsed_input_not_ok:{parse_out}")
+            state["state"] = "S2_MATCH_BUILD"
+        else:
+            parse_out = workdir / "parse_result.json"
+            parsed = parse_uploaded_file(Path(args.file).resolve(), parse_out)
         state["artifacts"]["parse_result"] = str(parse_out)
-        state["state"] = "S2_MATCH_BUILD"
+
+        if maybe_run_chunk_job(args, workdir, state_path, state, parsed, parse_out, ai_cmd):
+            return
+
         write_json(state_path, state)
 
         # S2 (AI-judge facade + deterministic batch build)

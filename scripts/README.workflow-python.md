@@ -12,6 +12,25 @@ python skills/adv-qbo-tool/scripts/workflow.py \
   --confirm-threshold 0.65
 ```
 
+Large-file chunk job:
+```bash
+python skills/adv-qbo-tool/scripts/start_chunk_job.py \
+  --file <uploaded.xlsx> \
+  --bill-rules <bill_rules.json> \
+  --chunk-size 10 \
+  --max-batches-per-run 1
+```
+
+Resume the latest waiting chunk job automatically:
+```bash
+python skills/adv-qbo-tool/scripts/resume_chunk_job.py
+```
+
+Retry only the failed records from the latest failed chunk job:
+```bash
+python skills/adv-qbo-tool/scripts/retry_failed_chunk_job.py
+```
+
 AI requirement (mandatory, no fallback):
 - Default is built-in local bridge (no per-run user input):
   - `python skills/adv-qbo-tool/scripts/ai_bridge.py`
@@ -42,3 +61,15 @@ Notes:
 - Step2 now supports optional history-conditioned judging (`--history`) as soft context for category decisions.
 - Confidence policy is thresholded: `>=0.85` auto-pass, `0.65~0.85` confirmation recommended, `<0.65` confirmation required.
 - Steps 2/3 are Python (`step2_batch_build.py`, `step3_render_recap.py`); Step 4 submit is Python via `step4_submit.py`.
+- When source rows exceed `--chunk-size`, `workflow.py` now auto-splits records into per-batch chunk workdirs under `<workdir>/chunks/`.
+- `start_chunk_job.py` is the safe Telegram/chat entry because it launches the first bounded batch in background and returns immediately.
+- `--max-batches-per-run 1` is the safe setting for Telegram-triggered runs; `0` means process all remaining batches in one invocation.
+- Chunk-job progress is written to:
+  - `workflow_state.json`
+  - `chunk_job_summary.json`
+  - `chunk_job_report.json`
+- Resume helper:
+  - `python skills/adv-qbo-tool/scripts/start_chunk_job.py`
+  - `python skills/adv-qbo-tool/scripts/resume_chunk_job.py`
+  - `python skills/adv-qbo-tool/scripts/chunk_job_status.py`
+  - `python skills/adv-qbo-tool/scripts/retry_failed_chunk_job.py`

@@ -83,7 +83,11 @@ Use this skill to run Bill / BillPayment on V3 safely.
   - `scripts/batch_plan_run.mjs`
 
 ## Workflow entry policy (hard rule)
-- Only allowed entry: `python skills/adv-qbo-tool/scripts/workflow.py ...`
+- Workflow implementation entry remains: `python skills/adv-qbo-tool/scripts/workflow.py ...`
+- For chat/Telegram-safe orchestration, prefer wrappers that delegate to `workflow.py`:
+  - `python skills/adv-qbo-tool/scripts/start_chunk_job.py ...`
+  - `python skills/adv-qbo-tool/scripts/resume_chunk_job.py`
+  - `python skills/adv-qbo-tool/scripts/retry_failed_chunk_job.py`
 - Built-in default AI bridge: `scripts/ai_bridge.py` (local OpenClaw Agent session) via `references/config/ai-runtime.json`.
 - `node scripts/run_workflow.mjs` is blocked/deprecated.
 - Direct step-script invocation is not allowed in normal operation.
@@ -119,6 +123,27 @@ python scripts/suggest_from_bill_rules.py --parsed <parsed.json> --bill-rules <b
 - Multi-row handling:
   - parser outputs `records[]` (one record per approved row).
   - if row count > 10, process in chunks of 10 and loop until done.
+  - For large Excel files, run bounded workflow batches instead of one long synchronous run:
+    - `python skills/adv-qbo-tool/scripts/start_chunk_job.py --file <uploaded.xlsx> --bill-rules <bill_rules.json> --chunk-size 10 --max-batches-per-run 1`
+    - continue same job:
+      - `python skills/adv-qbo-tool/scripts/resume_chunk_job.py`
+    - or resume the most recent waiting chunk job:
+      - `python skills/adv-qbo-tool/scripts/resume_chunk_job.py`
+  - Do not block the chat waiting for a full large-file run to finish. Start in background, reply immediately with job-started status, then use status/resume helpers.
+  - If workflow returns `WAIT_NEXT_BATCH`, summarize the progress for the user and wait for an explicit continue signal before resuming.
+  - If the user says `继续`, `继续下一批`, or `go on`, prefer:
+    - `python skills/adv-qbo-tool/scripts/chunk_job_status.py`
+    - then `python skills/adv-qbo-tool/scripts/resume_chunk_job.py`
+  - If the user asks `状态` / `进度`, use:
+    - `python skills/adv-qbo-tool/scripts/chunk_job_status.py`
+  - After execution, summarize:
+    - success count/list
+    - failed count/list
+    - failure reason summary
+    - retry hint for failed items:
+      - `python skills/adv-qbo-tool/scripts/retry_failed_chunk_job.py`
+  - Progress helper:
+    - `python skills/adv-qbo-tool/scripts/chunk_job_status.py`
 - Confirmation-stage response hard gate: must be rendered from `match_result.json` only (no legacy recap fallback).
 - Step-3 must produce fixed `match_result.json` via script:
 ```bash
