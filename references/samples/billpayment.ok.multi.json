@@ -1,0 +1,22 @@
+{
+  "kind": "bill_payment",
+  "client_ref": "ADV-BP-OK-001",
+  "memo": "billpayment ok sample",
+  "payload": {
+    "vendor_ref_text": "ALECO",
+    "bank_account_ref_text": "Cash in Bank",
+    "pay_date": "2026-02-13",
+    "lines": [
+      {
+        "bill_id": "157",
+        "linked_bill_qbo_id": "157",
+        "linked_bill_ref": "157",
+        "bill_date": "2026-02-09",
+        "due_date": "2026-02-09",
+        "open_balance": 1.23,
+        "pay_amount": 1.23,
+        "selected": true
+      }
+    ]
+  }
+}

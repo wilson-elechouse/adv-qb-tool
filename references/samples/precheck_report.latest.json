@@ -1,0 +1,56 @@
+{
+  "total": 71,
+  "ok": 64,
+  "failed": 7,
+  "issues": [
+    {
+      "index": 34,
+      "request_no": "202510040001",
+      "errors": [
+        "due_date_before_bill_date"
+      ]
+    },
+    {
+      "index": 66,
+      "request_no": "202507150001",
+      "errors": [
+        "missing_due_date"
+      ]
+    },
+    {
+      "index": 67,
+      "request_no": "202507110001",
+      "errors": [
+        "missing_due_date"
+      ]
+    },
+    {
+      "index": 68,
+      "request_no": "202506270001",
+      "errors": [
+        "missing_due_date"
+      ]
+    },
+    {
+      "index": 69,
+      "request_no": "202506240001",
+      "errors": [
+        "missing_due_date"
+      ]
+    },
+    {
+      "index": 70,
+      "request_no": "202506110001",
+      "errors": [
+        "missing_due_date"
+      ]
+    },
+    {
+      "index": 71,
+      "request_no": "202506050002",
+      "errors": [
+        "missing_due_date"
+      ]
+    }
+  ]
+}

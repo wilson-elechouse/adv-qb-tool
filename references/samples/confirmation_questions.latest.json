@@ -1,0 +1,65 @@
+{
+  "need_confirmation_count": 32,
+  "groups": [
+    {
+      "group": "Payroll Payment- Xinofi",
+      "count": 14,
+      "sample_request_nos": [
+        "202512210006",
+        "202512210005",
+        "202512210003",
+        "202512210002",
+        "202511070005",
+        "202511070004",
+        "202511070003",
+        "202509020007",
+        "202509020006",
+        "202509020005"
+      ],
+      "question": "Please confirm category mapping for Payment Type \"Payroll Payment- Xinofi\""
+    },
+    {
+      "group": "Admin Payment",
+      "count": 13,
+      "sample_request_nos": [
+        "202511180002",
+        "202510270001",
+        "202510250003",
+        "202510040001",
+        "202510030003",
+        "202509100001",
+        "202508230002",
+        "202508230001",
+        "202508190001",
+        "202508120003"
+      ],
+      "question": "Please confirm category mapping for Payment Type \"Admin Payment\""
+    },
+    {
+      "group": "Other Payment",
+      "count": 3,
+      "sample_request_nos": [
+        "202507180001",
+        "202507170002",
+        "202506050002"
+      ],
+      "question": "Please confirm category mapping for Payment Type \"Other Payment\""
+    },
+    {
+      "group": "Finance Payment",
+      "count": 1,
+      "sample_request_nos": [
+        "202511070006"
+      ],
+      "question": "Please confirm category mapping for Payment Type \"Finance Payment\""
+    },
+    {
+      "group": "Purchase Supplier",
+      "count": 1,
+      "sample_request_nos": [
+        "202507150001"
+      ],
+      "question": "Please confirm category mapping for Payment Type \"Purchase Supplier\""
+    }
+  ]
+}

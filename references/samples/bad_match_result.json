@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "kind": "bill",
+  "bill_rules_source": "local",
+  "fields": {
+    "vendor_ref_text": {
+      "value": "",
+      "needs_user_confirmation": true,
+      "alternatives": []
+    },
+    "category_ref_text": {
+      "value": "",
+      "needs_user_confirmation": true,
+      "alternatives": []
+    },
+    "location_ref_text": {
+      "value": "",
+      "needs_user_confirmation": true,
+      "alternatives": []
+    }
+  }
+}

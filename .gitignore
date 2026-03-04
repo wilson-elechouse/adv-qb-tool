@@ -1,0 +1,9 @@
+tmp/
+__pycache__/
+scripts/__pycache__/
+*.pyc
+*.log
+
+references/companies/*.local.json
+references/companies/*.secrets.json
+references/companies/*.private.json

@@ -1,0 +1,21 @@
+{
+  "version": "1.0",
+  "formula": "weighted_geometric_mean_with_missing_penalty",
+  "eps": 1e-6,
+  "missingPenaltyBase": 0.9,
+  "levels": {
+    "highMin": 0.85,
+    "mediumMin": 0.65
+  },
+  "weights": {
+    "vendor_ref_text": 0.20,
+    "category_ref_text": 0.20,
+    "tax_code_ref_text": 0.12,
+    "amount_lines": 0.15,
+    "bill_no": 0.08,
+    "client_ref": 0.08,
+    "bill_date": 0.07,
+    "due_date": 0.05,
+    "location_ref_text": 0.05
+  }
+}

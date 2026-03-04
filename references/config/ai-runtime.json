@@ -1,0 +1,13 @@
+{
+  "ai_cmd": "python skills/adv-qbo-tool/scripts/ai_bridge.py",
+  "required": true,
+  "stateless": true,
+  "agent_id": "category-judge",
+  "session_prefix": "adv-qbo-ai-judge",
+  "session_id": "adv-qbo-ai-judge",
+  "thinking": "low",
+  "local": true,
+  "max_retries": 3,
+  "debug_dir": "tmp/adv-qbo/ai-bridge-debug",
+  "notes": "Default uses local OpenClaw agent bridge. Stateless mode uses a fresh session id per call. Reads stdin JSON and returns strict JSON."
+}

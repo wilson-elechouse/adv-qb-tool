@@ -1,0 +1,8 @@
+{
+  "memo": "vendors from external sheet",
+  "vendors": [
+    { "name": "JILLIONS AND INFINITY HOLDING INC.", "note": "from payment request import" },
+    { "name": "Manpower Expense-Xinofi" },
+    { "name": "FS Agency-Personal" }
+  ]
+}

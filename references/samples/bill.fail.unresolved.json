@@ -1,0 +1,17 @@
+{
+  "kind": "bill",
+  "company_key": "xnofi",
+  "tenant_id": "t_09a27ad245998052",
+  "client_ref": "ADV-BILL-FAIL-UNRESOLVED",
+  "memo": "intentional unresolved sample",
+  "vendor_ref_text": "VENDOR_NOT_EXIST_XXX",
+  "bill_date": "2026-02-09",
+  "due_date": "2026-02-09",
+  "lines": [
+    {
+      "description": "bad account",
+      "amount": 2.34,
+      "account_ref_text": "ACCOUNT_NOT_EXIST_YYY"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "kind": "bill_payment",
+  "company_key": "xnofi",
+  "tenant_id": "t_09a27ad245998052",
+  "client_ref": "ADV-BP-FAIL-OVERPAY",
+  "memo": "intentional overpay sample",
+  "vendor_ref_text": "ALECO",
+  "bank_account_ref_text": "Cash in Bank",
+  "pay_date": "2026-02-09",
+  "amount": 999999,
+  "allocations": [
+    { "linked_bill_doc_number": "CK-BILL-MAINLINE-001", "amount": 999999 }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "mode": "chunked-serial",
+  "input": "C:\\Users\\acer\\clawd\\skills\\adv-qbo-tool\\references\\samples\\batch.sample.json",
+  "total_items": 2,
+  "chunk_size": 1,
+  "total_chunks": 2,
+  "continue_on_error": true,
+  "max_items": 500,
+  "started_at": "2026-02-14T07:56:38.772Z",
+  "next_chunk_index": 2,
+  "chunk_results": [
+    {
+      "chunk_index": 1,
+      "ok": true,
+      "total": 1,
+      "ok_count": 1,
+      "failed_count": 0,
+      "failed_by_reason": {},
+      "results": [
+        {
+          "index": 1,
+          "kind": "bill",
+          "ok": true,
+          "output": {
+            "submission_id": "sub_e5d707ed",
+            "kind": "bill",
+            "client_ref": "ADV-BILL-OK-001-801683",
+            "status": "reviewed",
+            "qbo_id": null,
+            "validate_ok": true,
+            "precheck_ok": true,
+            "submit_ok": false,
+            "manual_submit_required": true,
+            "ai_agent_tag": "[AI_AGENT][adv-qbo-tool]",
+            "view_url": "https://qb.uudc.us/submissions/sub_e5d707ed/result"
+          }
+        }
+      ]
+    },
+    {
+      "chunk_index": 2,
+      "ok": true,
+      "total": 1,
+      "ok_count": 1,
+      "failed_count": 0,
+      "failed_by_reason": {},
+      "results": [
+        {
+          "index": 1,
+          "kind": "bill_payment",
+          "ok": true,
+          "output": {
+            "submission_id": "sub_9582f015",
+            "kind": "bill_payment",
+            "client_ref": "ADV-BP-OK-001-807355",
+            "status": "reviewed",
+            "qbo_id": null,
+            "validate_ok": true,
+            "precheck_ok": true,
+            "submit_ok": false,
+            "manual_submit_required": true,
+            "ai_agent_tag": "[AI_AGENT][adv-qbo-tool]",
+            "view_url": "https://qb.uudc.us/submissions/sub_9582f015/result"
+          }
+        }
+      ]
+    }
+  ],
+  "ok": 2,
+  "failed": 0,
+  "failed_by_reason": {},
+  "finished_at": "2026-02-14T07:56:50.312Z",
+  "done": true
+}

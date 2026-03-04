@@ -1,0 +1,88 @@
+{
+  "version": "2026-02-21",
+  "tenant": "xnofi",
+  "policy": {
+    "confirmation_first": true,
+    "unknown_requires_user_confirmation": true,
+    "no_silent_default": true
+  },
+  "paymentTypeRules": {
+    "Payroll Payment- Xinofi": {
+      "category": "Employees-Salary/Payroll Expense",
+      "account": "5501 Payroll - Head Office",
+      "confidence": "user-confirmed"
+    },
+    "Purchase Supplier": {
+      "category": "Admin-Office Supplies",
+      "account": "Purchases (147)",
+      "confidence": "user-confirmed"
+    },
+    "Finance Payment": {
+      "category": "Service-Consultancy",
+      "account": "6103 Permit and License",
+      "confidence": "user-confirmed"
+    }
+  },
+  "keywordRules": [
+    {
+      "whenPaymentType": "Other Payment",
+      "matchAny": ["communication", "load allowance", "admin-communicate", "internet", "phone"],
+      "category": "Admin-Communicate",
+      "account": "5205 COS - Communication"
+    },
+    {
+      "whenPaymentType": "Other Payment",
+      "matchAny": ["transport", "travel", "mototaxi", "lalamove"],
+      "category": "Admin-Transport",
+      "account": "5802 Travel Expenses"
+    },
+    {
+      "whenPaymentType": "Admin Payment",
+      "matchAny": ["consult", "consultancy", "consultant"],
+      "category": "Service-Consultancy",
+      "account": "5702 Consultancy Fee"
+    },
+    {
+      "whenPaymentType": "Admin Payment",
+      "matchAny": ["communication", "load allowance", "admin-communicate", "internet", "phone"],
+      "category": "Admin-Communicate",
+      "account": "5205 COS - Communication"
+    },
+    {
+      "whenPaymentType": "Admin Payment",
+      "matchAny": ["feishu", "quickbook", "quickbooks", "domain", "email", "subscription", "digital-"],
+      "category": "Admin-Office Supplies",
+      "account": "5402 Dues and subscriptions"
+    },
+    {
+      "whenPaymentType": "Admin Payment",
+      "matchAny": ["sec", "permit", "registration", "notary", "city hall"],
+      "category": "Service-Consultancy",
+      "account": "6103 Permit and License"
+    },
+    {
+      "whenPaymentType": "Admin Payment",
+      "matchAny": ["transport", "travel", "mototaxi", "driver fee"],
+      "category": "Admin-Transport",
+      "account": "5802 Travel Expenses"
+    },
+    {
+      "whenPaymentType": "Admin Payment",
+      "matchAny": ["office supplies", "supplies", "laptop", "desktop", "purchase"],
+      "category": "Admin-Office Supplies",
+      "account": "5204 COS - Office Supplies"
+    }
+  ],
+  "fallback": {
+    "Admin Payment": {
+      "category": "Admin-Office Supplies",
+      "account": "5204 COS - Office Supplies",
+      "requiresReview": true
+    },
+    "Other Payment": {
+      "category": "Admin-Office Supplies",
+      "account": "5204 COS - Office Supplies",
+      "requiresReview": true
+    }
+  }
+}

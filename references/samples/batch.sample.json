@@ -1,0 +1,12 @@
+[
+  {
+    "kind": "bill",
+    "payloadPath": "bill.ok.min.json",
+    "final": false
+  },
+  {
+    "kind": "bill_payment",
+    "payloadPath": "billpayment.ok.multi.json",
+    "final": false
+  }
+]

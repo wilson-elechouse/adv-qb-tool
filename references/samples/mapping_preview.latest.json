@@ -1,0 +1,2135 @@
+{
+  "count": 71,
+  "items": [
+    {
+      "source": {
+        "request_no": "202602020002",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2026-01-01 00:00:00",
+        "billing_end": "2026-01-31 00:00:00",
+        "due_date": "2026-02-05 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Admin Payment | Payables Amount-Gross:10000.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:10000.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDoxODAxNDMzMC1BQ0FFLTRCOUQtQjM4QS05Njk5MzhFMjI1NTY6ZTMwN2MxNjY4OGY1ZjRkOTI4YTRiN2EzNmJiYTIxMDk6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202602020002",
+        "bill_date": "2026-01-01",
+        "due_date": "2026-02-05",
+        "service_start_date": "2026-01-01",
+        "service_end_date": "2026-01-31",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "10000.000000 PHP",
+        "net_amount": "10000.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDoxODAxNDMzMC1BQ0FFLTRCOUQtQjM4QS05Njk5MzhFMjI1NTY6ZTMwN2MxNjY4OGY1ZjRkOTI4YTRiN2EzNmJiYTIxMDk6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202602020001",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2026-01-01 00:00:00",
+        "billing_end": "2026-01-31 00:00:00",
+        "due_date": "2026-02-05 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Admin Payment | Payables Amount-Gross:10000.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:10000.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpFREYzRTg0Mi1DRTEyLTQ1RUQtOEU3Qy1DNEIxNjY1MzA3MzI6MGYwY2E0OGJiMTY5MGNlOGE4ODk3ZDIyMmY2NzFiZjU6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202602020001",
+        "bill_date": "2026-01-01",
+        "due_date": "2026-02-05",
+        "service_start_date": "2026-01-01",
+        "service_end_date": "2026-01-31",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "10000.000000 PHP",
+        "net_amount": "10000.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpFREYzRTg0Mi1DRTEyLTQ1RUQtOEU3Qy1DNEIxNjY1MzA3MzI6MGYwY2E0OGJiMTY5MGNlOGE4ODk3ZDIyMmY2NzFiZjU6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202601160001",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2026-01-16 00:00:00",
+        "billing_end": "2026-01-16 00:00:00",
+        "due_date": "2026-01-16 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Finance Payment | Payables Amount-Gross:10600.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:10600.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDowNjZDNkUxMy02Qjc3LTQxQzMtQkUxRS1DMEY0MzFCODI1MDY6MWVmZGFjZGQwM2U0ZmNiOTJkODM5MjYwN2JhMGZhYzg6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202601160001",
+        "bill_date": "2026-01-16",
+        "due_date": "2026-01-16",
+        "service_start_date": "2026-01-16",
+        "service_end_date": "2026-01-16",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "10600.000000 PHP",
+        "net_amount": "10600.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDowNjZDNkUxMy02Qjc3LTQxQzMtQkUxRS1DMEY0MzFCODI1MDY6MWVmZGFjZGQwM2U0ZmNiOTJkODM5MjYwN2JhMGZhYzg6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202601060002",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-12-01 00:00:00",
+        "billing_end": "2025-12-31 00:00:00",
+        "due_date": "2025-12-31 00:00:00",
+        "vat_in_ex": "VAT IN",
+        "details_01": "Payment Type:Admin Payment | Payables Amount-Gross:10000.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:10000.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDowQ0NDQUY3NS1FMTEyLTQxODctQkQ3NS1ENzdDMEQ5RjY2NjE6YmYyYTUxZGY3MDgyMWQwMDM5YmNjNzA5MzhjNTgxZTk6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202601060002",
+        "bill_date": "2025-12-01",
+        "due_date": "2025-12-31",
+        "service_start_date": "2025-12-01",
+        "service_end_date": "2025-12-31",
+        "location_code": "HO",
+        "tax_mode": "VAT IN",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "10000.000000 PHP",
+        "net_amount": "10000.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDowQ0NDQUY3NS1FMTEyLTQxODctQkQ3NS1ENzdDMEQ5RjY2NjE6YmYyYTUxZGY3MDgyMWQwMDM5YmNjNzA5MzhjNTgxZTk6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202601060001",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-12-01 00:00:00",
+        "billing_end": "2025-12-31 00:00:00",
+        "due_date": "2025-12-31 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Admin Payment | Payables Amount-Gross:10000.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:10000.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDo2NzZFNEI5Qy0wNDJGLTQwQkUtQkVGRC00Rjg5MUQ3MzEzRDk6YmI2M2I0MzI1NTBjMjc0ZTcyOGU1MzZlNjdmZmQ1YzY6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202601060001",
+        "bill_date": "2025-12-01",
+        "due_date": "2025-12-31",
+        "service_start_date": "2025-12-01",
+        "service_end_date": "2025-12-31",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "10000.000000 PHP",
+        "net_amount": "10000.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDo2NzZFNEI5Qy0wNDJGLTQwQkUtQkVGRC00Rjg5MUQ3MzEzRDk6YmI2M2I0MzI1NTBjMjc0ZTcyOGU1MzZlNjdmZmQ1YzY6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202601050001",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2026-01-01 00:00:00",
+        "billing_end": "2026-01-31 00:00:00",
+        "due_date": "2026-01-05 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Admin Payment | Payables Amount-Gross:600.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:600.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDozRUNBNEEzNS03MDRCLTRDRTUtOEVGOC1GMjE0ODU3MTE4QUY6YzU1MTYxNDhiMGM1NDRmYzAyZjU5YWU0ZTZiOTAxYjY6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202601050001",
+        "bill_date": "2026-01-01",
+        "due_date": "2026-01-05",
+        "service_start_date": "2026-01-01",
+        "service_end_date": "2026-01-31",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "600.000000 PHP",
+        "net_amount": "600.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDozRUNBNEEzNS03MDRCLTRDRTUtOEVGOC1GMjE0ODU3MTE4QUY6YzU1MTYxNDhiMGM1NDRmYzAyZjU5YWU0ZTZiOTAxYjY6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202512210010",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-08-01 00:00:00",
+        "billing_end": "2025-08-31 00:00:00",
+        "due_date": "2025-12-22 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Admin Payment | Payables Amount-Gross:1080.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:1080.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDo4NUM5NzdBMS0zRUM2LTQ5MTEtQTE1OC1FNzE2MzdBMjMyM0M6MmJkNThiZWNlMzE2M2JiN2RjYjYxMmY2MDdkMjUwMzk6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202512210010",
+        "bill_date": "2025-08-01",
+        "due_date": "2025-12-22",
+        "service_start_date": "2025-08-01",
+        "service_end_date": "2025-08-31",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "1080.000000 PHP",
+        "net_amount": "1080.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDo4NUM5NzdBMS0zRUM2LTQ5MTEtQTE1OC1FNzE2MzdBMjMyM0M6MmJkNThiZWNlMzE2M2JiN2RjYjYxMmY2MDdkMjUwMzk6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202512210009",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-10-01 00:00:00",
+        "billing_end": "2025-10-31 00:00:00",
+        "due_date": "2025-12-22 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Admin Payment | Payables Amount-Gross:1836.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:1836.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpDNDlGMDZDNi01MDk2LTRCMDQtODI0RS1COEM4OTlBMTIxNjE6ZWE3ZTYzNTBjZGRjZDBjYmY0ZGFhMjAxYzk0OTViZGM6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202512210009",
+        "bill_date": "2025-10-01",
+        "due_date": "2025-12-22",
+        "service_start_date": "2025-10-01",
+        "service_end_date": "2025-10-31",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "1836.000000 PHP",
+        "net_amount": "1836.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpDNDlGMDZDNi01MDk2LTRCMDQtODI0RS1COEM4OTlBMTIxNjE6ZWE3ZTYzNTBjZGRjZDBjYmY0ZGFhMjAxYzk0OTViZGM6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202512210008",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-09-01 00:00:00",
+        "billing_end": "2025-09-30 00:00:00",
+        "due_date": "2025-12-22 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Admin Payment | Payables Amount-Gross:2118.530000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:2118.530000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDo3RUUxREJBNy1BNkIyLTRBM0EtQjY1MS0yMzU1REE3OUMyQUY6MzNlYTYyM2VhNDE2N2U2MTNhMzk5ZGM3MjM2NmJmODM6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202512210008",
+        "bill_date": "2025-09-01",
+        "due_date": "2025-12-22",
+        "service_start_date": "2025-09-01",
+        "service_end_date": "2025-09-30",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "2118.530000 PHP",
+        "net_amount": "2118.530000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDo3RUUxREJBNy1BNkIyLTRBM0EtQjY1MS0yMzU1REE3OUMyQUY6MzNlYTYyM2VhNDE2N2U2MTNhMzk5ZGM3MjM2NmJmODM6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202512210007",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-08-01 00:00:00",
+        "billing_end": "2025-08-31 00:00:00",
+        "due_date": "2025-12-22 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Admin Payment | Payables Amount-Gross:1057.540000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:1057.540000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpEODM4MTlGNi02MzU0LTRBNzktODJDOS04ODM4RTg1MkEzM0Y6NDAyZGQ2ZDA3M2U1MTc5NTFmNDYxNjc2OGExOGUzYjI6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202512210007",
+        "bill_date": "2025-08-01",
+        "due_date": "2025-12-22",
+        "service_start_date": "2025-08-01",
+        "service_end_date": "2025-08-31",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "1057.540000 PHP",
+        "net_amount": "1057.540000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpEODM4MTlGNi02MzU0LTRBNzktODJDOS04ODM4RTg1MkEzM0Y6NDAyZGQ2ZDA3M2U1MTc5NTFmNDYxNjc2OGExOGUzYjI6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202512210006",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-11-16 00:00:00",
+        "billing_end": "2025-11-30 00:00:00",
+        "due_date": "2026-01-09 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Payroll Payment- Xinofi | Payables Amount-Gross:21079.340000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:21079.340000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDo5MUNBOURGMS0wMjZBLTQ1QkItODA2RC0wQ0JBMEIwRDExQzY6ZjkwOTMxMTk3NjY0NGU5NGZmZDFlM2U2ZWRkM2QyZmQ6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202512210006",
+        "bill_date": "2025-11-16",
+        "due_date": "2026-01-09",
+        "service_start_date": "2025-11-16",
+        "service_end_date": "2025-11-30",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "21079.340000 PHP",
+        "net_amount": "21079.340000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDo5MUNBOURGMS0wMjZBLTQ1QkItODA2RC0wQ0JBMEIwRDExQzY6ZjkwOTMxMTk3NjY0NGU5NGZmZDFlM2U2ZWRkM2QyZmQ6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202512210005",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-11-01 00:00:00",
+        "billing_end": "2025-11-15 00:00:00",
+        "due_date": "2025-12-25 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Payroll Payment- Xinofi | Payables Amount-Gross:19515.600000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:19515.600000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDozQUFBQzM5Qi1CNDQ5LTQ3MDItQjdDNy0wMEJCMzM3N0Q1MjE6YzUzYTM3NDVmYmE3NGRkNWY3ODNmZTRkMWM1MzE0ZmU6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202512210005",
+        "bill_date": "2025-11-01",
+        "due_date": "2025-12-25",
+        "service_start_date": "2025-11-01",
+        "service_end_date": "2025-11-15",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "19515.600000 PHP",
+        "net_amount": "19515.600000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDozQUFBQzM5Qi1CNDQ5LTQ3MDItQjdDNy0wMEJCMzM3N0Q1MjE6YzUzYTM3NDVmYmE3NGRkNWY3ODNmZTRkMWM1MzE0ZmU6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202512210003",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-10-16 00:00:00",
+        "billing_end": "2025-10-31 00:00:00",
+        "due_date": "2025-12-22 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Payroll Payment- Xinofi | Payables Amount-Gross:19515.600000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:19515.600000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDo1NzA5NUY5NS0xNjBBLTQ4NzItQUZGMS00ODc4OTQxREE5RUU6M2E2NDY5ZDU0NzVkYmJmZTA3NmY1MzYzODhmMTRhZDY6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202512210003",
+        "bill_date": "2025-10-16",
+        "due_date": "2025-12-22",
+        "service_start_date": "2025-10-16",
+        "service_end_date": "2025-10-31",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "19515.600000 PHP",
+        "net_amount": "19515.600000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDo1NzA5NUY5NS0xNjBBLTQ4NzItQUZGMS00ODc4OTQxREE5RUU6M2E2NDY5ZDU0NzVkYmJmZTA3NmY1MzYzODhmMTRhZDY6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202512210002",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-10-01 00:00:00",
+        "billing_end": "2025-10-15 00:00:00",
+        "due_date": "2025-12-22 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Payroll Payment- Xinofi | Payables Amount-Gross:18014.400000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:18014.400000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpERTNDMjY0My00MkUzLTRENDktOTk3MC1EQUU0NkZDRTRFRjM6YzEzMDliNzgxZGJkYzUxYTdjNjRlODY3MTlkMjhkYzM6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202512210002",
+        "bill_date": "2025-10-01",
+        "due_date": "2025-12-22",
+        "service_start_date": "2025-10-01",
+        "service_end_date": "2025-10-15",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "18014.400000 PHP",
+        "net_amount": "18014.400000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpERTNDMjY0My00MkUzLTRENDktOTk3MC1EQUU0NkZDRTRFRjM6YzEzMDliNzgxZGJkYzUxYTdjNjRlODY3MTlkMjhkYzM6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202512200006",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-10-01 00:00:00",
+        "billing_end": "2025-10-31 00:00:00",
+        "due_date": "2025-12-22 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Mandatory Benefits | Payables Amount-Gross:3736.800000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:3736.800000;\n\nPayment Type:Mandatory Benefits | Payables Amount-Gross:540.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:540.000000;\n\nPayment Type:Mandatory Benefits | Payables Amount-Gross:432.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:432.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDo1QzA0ODVERi00N0U2LTRCODItQjkwOC0wNzM5NzI1ODNBQTA6ZjJhZWJlYzM5ZTFmZWUyYzcwZDhlYWZlMDIxN2ZhMmI6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202512200006",
+        "bill_date": "2025-10-01",
+        "due_date": "2025-12-22",
+        "service_start_date": "2025-10-01",
+        "service_end_date": "2025-10-31",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "3736.800000 PHP",
+        "net_amount": "3736.800000;\n\nPayment Type:Mandatory Benefits",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDo1QzA0ODVERi00N0U2LTRCODItQjkwOC0wNzM5NzI1ODNBQTA6ZjJhZWJlYzM5ZTFmZWUyYzcwZDhlYWZlMDIxN2ZhMmI6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202512200005",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-09-01 00:00:00",
+        "billing_end": "2025-09-30 00:00:00",
+        "due_date": "2025-12-22 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Mandatory Benefits | Payables Amount-Gross:3736.800000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:3736.800000;\n\nPayment Type:Mandatory Benefits | Payables Amount-Gross:540.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:540.000000;\n\nPayment Type:Mandatory Benefits | Payables Amount-Gross:432.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:432.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpDMzM2OUVGQy04ODBELTRDRjMtODQ1RS02NUUzMUNDQjAxOEI6YTI3MzkyYThlODdlNTllOWVjMDVmZGUyZjVlMzNhOTY6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202512200005",
+        "bill_date": "2025-09-01",
+        "due_date": "2025-12-22",
+        "service_start_date": "2025-09-01",
+        "service_end_date": "2025-09-30",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "3736.800000 PHP",
+        "net_amount": "3736.800000;\n\nPayment Type:Mandatory Benefits",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpDMzM2OUVGQy04ODBELTRDRjMtODQ1RS02NUUzMUNDQjAxOEI6YTI3MzkyYThlODdlNTllOWVjMDVmZGUyZjVlMzNhOTY6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202512200004",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-08-01 00:00:00",
+        "billing_end": "2025-08-31 00:00:00",
+        "due_date": "2025-12-22 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Mandatory Benefits | Payables Amount-Gross:3736.800000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:3736.800000;\n\nPayment Type:Mandatory Benefits | Payables Amount-Gross:540.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:540.000000;\n\nPayment Type:Mandatory Benefits | Payables Amount-Gross:432.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:432.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDo1RDIxMjdEMi1EOEI4LTQ0MDgtQjdDMi0xREQ3RTRENzNDNEQ6ODBiYWVhZDc3MDI4YjgyYzkzZmRhZTQ3YzEwNjY5OGY6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202512200004",
+        "bill_date": "2025-08-01",
+        "due_date": "2025-12-22",
+        "service_start_date": "2025-08-01",
+        "service_end_date": "2025-08-31",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "3736.800000 PHP",
+        "net_amount": "3736.800000;\n\nPayment Type:Mandatory Benefits",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDo1RDIxMjdEMi1EOEI4LTQ0MDgtQjdDMi0xREQ3RTRENzNDNEQ6ODBiYWVhZDc3MDI4YjgyYzkzZmRhZTQ3YzEwNjY5OGY6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202512200002",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-07-01 00:00:00",
+        "billing_end": "2025-07-31 00:00:00",
+        "due_date": "2025-12-22 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Mandatory Benefits | Payables Amount-Gross:3736.800000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:3736.800000;\n\nPayment Type:Mandatory Benefits | Payables Amount-Gross:540.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:540.000000;\n\nPayment Type:Mandatory Benefits | Payables Amount-Gross:432.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:432.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpGMjhBMzNGQi05ODUyLTQ4QTQtQjhEQS1DRkYzN0M4RjlGNzM6YzdlOWEzYjYyMDU2NjBmMzM1Y2FkNzMzODcxZDZlNWE6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202512200002",
+        "bill_date": "2025-07-01",
+        "due_date": "2025-12-22",
+        "service_start_date": "2025-07-01",
+        "service_end_date": "2025-07-31",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "3736.800000 PHP",
+        "net_amount": "3736.800000;\n\nPayment Type:Mandatory Benefits",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpGMjhBMzNGQi05ODUyLTQ4QTQtQjhEQS1DRkYzN0M4RjlGNzM6YzdlOWEzYjYyMDU2NjBmMzM1Y2FkNzMzODcxZDZlNWE6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202512100001",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-12-01 00:00:00",
+        "billing_end": "2025-12-31 00:00:00",
+        "due_date": "2025-12-04 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Admin Payment | Payables Amount-Gross:600.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:600.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDoxNEQyNDEyMC04MzlFLTRFRTQtQjlCNS1FNTA2QkM1QzRDMTY6NzBiNzFlODEzMGE4OTIxNzY0MzNhMDg2ZWUzZGJjNzY6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202512100001",
+        "bill_date": "2025-12-01",
+        "due_date": "2025-12-04",
+        "service_start_date": "2025-12-01",
+        "service_end_date": "2025-12-31",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "600.000000 PHP",
+        "net_amount": "600.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDoxNEQyNDEyMC04MzlFLTRFRTQtQjlCNS1FNTA2QkM1QzRDMTY6NzBiNzFlODEzMGE4OTIxNzY0MzNhMDg2ZWUzZGJjNzY6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202512090002",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-11-01 00:00:00",
+        "billing_end": "2025-11-30 00:00:00",
+        "due_date": "2025-12-04 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Admin Payment | Payables Amount-Gross:10000.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:10000.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpCQTRCNzVFRi04QzMyLTQyQTItODczNS1ENjJGNzA2QTg3Mzc6YmY5YjQ4ZGQ0NTliZWVlZDBmODQwMjhiNDdiMDMyYmQ6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202512090002",
+        "bill_date": "2025-11-01",
+        "due_date": "2025-12-04",
+        "service_start_date": "2025-11-01",
+        "service_end_date": "2025-11-30",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "10000.000000 PHP",
+        "net_amount": "10000.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpCQTRCNzVFRi04QzMyLTQyQTItODczNS1ENjJGNzA2QTg3Mzc6YmY5YjQ4ZGQ0NTliZWVlZDBmODQwMjhiNDdiMDMyYmQ6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202512090001",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-11-01 00:00:00",
+        "billing_end": "2025-11-30 00:00:00",
+        "due_date": "2025-12-04 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Admin Payment | Payables Amount-Gross:10000.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:10000.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDo3QjA3QTczNS1CQjM3LTRGQkItOTlEMy05MUQzQzc5QkMyREQ6YTFmNmU0YTliYmYxZWRiZTg3NjI4MzE4NDc2Y2NlYmM6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202512090001",
+        "bill_date": "2025-11-01",
+        "due_date": "2025-12-04",
+        "service_start_date": "2025-11-01",
+        "service_end_date": "2025-11-30",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "10000.000000 PHP",
+        "net_amount": "10000.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDo3QjA3QTczNS1CQjM3LTRGQkItOTlEMy05MUQzQzc5QkMyREQ6YTFmNmU0YTliYmYxZWRiZTg3NjI4MzE4NDc2Y2NlYmM6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202511180002",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-10-27 00:00:00",
+        "billing_end": "2025-10-27 00:00:00",
+        "due_date": "2025-11-18 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Admin Payment | Payables Amount-Gross:12619.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:12619.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDo2MjZFQjIzQi0yMjg5LTRFNEUtOTI5MC1BRDgzNzk2Mzg2RkY6NWViOTExNTExZDQ3NzUzYWIwYjRkNWExODc4NDdlNzc6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202511180002",
+        "bill_date": "2025-10-27",
+        "due_date": "2025-11-18",
+        "service_start_date": "2025-10-27",
+        "service_end_date": "2025-10-27",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "12619.000000 PHP",
+        "net_amount": "12619.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDo2MjZFQjIzQi0yMjg5LTRFNEUtOTI5MC1BRDgzNzk2Mzg2RkY6NWViOTExNTExZDQ3NzUzYWIwYjRkNWExODc4NDdlNzc6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202511070006",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-07-21 00:00:00",
+        "billing_end": "2025-07-31 00:00:00",
+        "due_date": "2025-08-01 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Finance Payment | Payables Amount-Gross:25000.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:25000.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpDODIyMjc0Ri0xOUJGLTQyQzYtOTU2MS0yMTgwQ0NCNDg2N0I6Yzc3YmI1M2NkOTBiOTVjNTQ5ZWE0MjdmZmM3MDFhZDA6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202511070006",
+        "bill_date": "2025-07-21",
+        "due_date": "2025-08-01",
+        "service_start_date": "2025-07-21",
+        "service_end_date": "2025-07-31",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "25000.000000 PHP",
+        "net_amount": "25000.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpDODIyMjc0Ri0xOUJGLTQyQzYtOTU2MS0yMTgwQ0NCNDg2N0I6Yzc3YmI1M2NkOTBiOTVjNTQ5ZWE0MjdmZmM3MDFhZDA6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202511070005",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-09-16 00:00:00",
+        "billing_end": "2025-09-30 00:00:00",
+        "due_date": "2025-11-09 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Payroll Payment- Xinofi | Payables Amount-Gross:19515.600000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:19515.600000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDoxQkQ1NzQ3Qi0xRTQ3LTQ4MjItOTkyRS04QTc5RjVCQTE4ODQ6MjVhNDEyYjFhMGFkNTM3MjZlODAxODY5YjM3YmU2NWU6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202511070005",
+        "bill_date": "2025-09-16",
+        "due_date": "2025-11-09",
+        "service_start_date": "2025-09-16",
+        "service_end_date": "2025-09-30",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "19515.600000 PHP",
+        "net_amount": "19515.600000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDoxQkQ1NzQ3Qi0xRTQ3LTQ4MjItOTkyRS04QTc5RjVCQTE4ODQ6MjVhNDEyYjFhMGFkNTM3MjZlODAxODY5YjM3YmU2NWU6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202511070004",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-09-01 00:00:00",
+        "billing_end": "2025-09-15 00:00:00",
+        "due_date": "2025-10-25 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Payroll Payment- Xinofi | Payables Amount-Gross:18389.700000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:18389.700000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDoxM0EzMUJFMy1GMzE1LTRBMzktQkJEMS1GNTQ1MUY5Q0JFQjg6YjU4NjQ4YTU2YTZjZDdmNjE3ZGFiY2ZhYjViYzAzZTQ6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202511070004",
+        "bill_date": "2025-09-01",
+        "due_date": "2025-10-25",
+        "service_start_date": "2025-09-01",
+        "service_end_date": "2025-09-15",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "18389.700000 PHP",
+        "net_amount": "18389.700000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDoxM0EzMUJFMy1GMzE1LTRBMzktQkJEMS1GNTQ1MUY5Q0JFQjg6YjU4NjQ4YTU2YTZjZDdmNjE3ZGFiY2ZhYjViYzAzZTQ6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202511070003",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-08-16 00:00:00",
+        "billing_end": "2025-09-15 00:00:00",
+        "due_date": "2025-10-10 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Payroll Payment- Xinofi | Payables Amount-Gross:16513.200000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:16513.200000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDo5QzA5QTNFNS0yRDAyLTRGQkEtOUEwOC00RkVBREZGMDY0MzE6NmU5MDk0MmU4ODY2Mjk1Yzg5NTg0NWQ0ZjMwZGQ1MzE6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202511070003",
+        "bill_date": "2025-08-16",
+        "due_date": "2025-10-10",
+        "service_start_date": "2025-08-16",
+        "service_end_date": "2025-09-15",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "16513.200000 PHP",
+        "net_amount": "16513.200000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDo5QzA5QTNFNS0yRDAyLTRGQkEtOUEwOC00RkVBREZGMDY0MzE6NmU5MDk0MmU4ODY2Mjk1Yzg5NTg0NWQ0ZjMwZGQ1MzE6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202511040003",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-11-01 00:00:00",
+        "billing_end": "2025-11-30 00:00:00",
+        "due_date": "2025-11-01 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Admin Payment | Payables Amount-Gross:300.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:300.000000;\n\nPayment Type:Admin Payment | Payables Amount-Gross:300.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:300.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpCMkVCRTI3NC1DMDkxLTQxNUItQUNFOC1BQTgzQzJBRjM0RDI6ZmM2MzYyOWRkZmJmODkwM2UwMzlkOGI2ZTU0MDkxMzk6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202511040003",
+        "bill_date": "2025-11-01",
+        "due_date": "2025-11-01",
+        "service_start_date": "2025-11-01",
+        "service_end_date": "2025-11-30",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "300.000000 PHP",
+        "net_amount": "300.000000;\n\nPayment Type:Admin Payment",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpCMkVCRTI3NC1DMDkxLTQxNUItQUNFOC1BQTgzQzJBRjM0RDI6ZmM2MzYyOWRkZmJmODkwM2UwMzlkOGI2ZTU0MDkxMzk6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202511040002",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-10-01 00:00:00",
+        "billing_end": "2025-10-31 00:00:00",
+        "due_date": "2025-10-31 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Admin Payment | Payables Amount-Gross:10000.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:10000.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDo4NzU5QkNFRS0wMjRELTQ4MzYtODc0OS1FMjQ2RTlGRTc1Mzc6ZWQ1NTJiYWQ2ZWI1NjE4ZTRjNGI2YTAzYjM2ZDdlZDM6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202511040002",
+        "bill_date": "2025-10-01",
+        "due_date": "2025-10-31",
+        "service_start_date": "2025-10-01",
+        "service_end_date": "2025-10-31",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "10000.000000 PHP",
+        "net_amount": "10000.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDo4NzU5QkNFRS0wMjRELTQ4MzYtODc0OS1FMjQ2RTlGRTc1Mzc6ZWQ1NTJiYWQ2ZWI1NjE4ZTRjNGI2YTAzYjM2ZDdlZDM6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202511040001",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-10-01 00:00:00",
+        "billing_end": "2025-10-31 00:00:00",
+        "due_date": "2025-10-31 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Admin Payment | Payables Amount-Gross:10000.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:10000.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDozNUVGNjA4OC1BNjMwLTQ5QjgtQkNERS0yNjA3RTVFOTA3Rjk6ODA3NjE1YjdmNTk4ZGJmZGFiZmQ2ZTFlMmU0NzUzODE6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202511040001",
+        "bill_date": "2025-10-01",
+        "due_date": "2025-10-31",
+        "service_start_date": "2025-10-01",
+        "service_end_date": "2025-10-31",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "10000.000000 PHP",
+        "net_amount": "10000.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDozNUVGNjA4OC1BNjMwLTQ5QjgtQkNERS0yNjA3RTVFOTA3Rjk6ODA3NjE1YjdmNTk4ZGJmZGFiZmQ2ZTFlMmU0NzUzODE6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202510270001",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-10-24 00:00:00",
+        "billing_end": "2025-10-24 00:00:00",
+        "due_date": "2025-10-25 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Admin Payment | Payables Amount-Gross:400.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:400.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDoyRUMyRTk4Qi03Rjg4LTRDMzUtQkU4RC1BRjcxMDdDQjA2NUU6YWYzZThhYjRjYjkzY2EyYzk2Y2EzODZiYThhYjRkNWM6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202510270001",
+        "bill_date": "2025-10-24",
+        "due_date": "2025-10-25",
+        "service_start_date": "2025-10-24",
+        "service_end_date": "2025-10-24",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "400.000000 PHP",
+        "net_amount": "400.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDoyRUMyRTk4Qi03Rjg4LTRDMzUtQkU4RC1BRjcxMDdDQjA2NUU6YWYzZThhYjRjYjkzY2EyYzk2Y2EzODZiYThhYjRkNWM6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202510250003",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-10-24 00:00:00",
+        "billing_end": "2025-10-24 00:00:00",
+        "due_date": "2025-10-25 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Admin Payment | Payables Amount-Gross:211.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:211.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDo5NzlGQzYwOC01MUU2LTRCQzQtQkYxNi03Mjk1REYzRDAwNTg6ZmFjNzFiMjk5YjlkNTMyOTliYWM0NDljYjE2MjczZTM6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202510250003",
+        "bill_date": "2025-10-24",
+        "due_date": "2025-10-25",
+        "service_start_date": "2025-10-24",
+        "service_end_date": "2025-10-24",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "211.000000 PHP",
+        "net_amount": "211.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDo5NzlGQzYwOC01MUU2LTRCQzQtQkYxNi03Mjk1REYzRDAwNTg6ZmFjNzFiMjk5YjlkNTMyOTliYWM0NDljYjE2MjczZTM6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202510170002",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-09-01 00:00:00",
+        "billing_end": "2025-09-30 00:00:00",
+        "due_date": "2025-09-30 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Admin Payment | Payables Amount-Gross:10000.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:10000.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDowQ0U4M0ZGRS1FREE0LTQ2OEItODM0MS1DNEU3MUQ4OTY2NzM6M2UzZTMzMWYwMGE2MWUzMDVkMDZlMjU0YmI2MTQ0Zjc6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202510170002",
+        "bill_date": "2025-09-01",
+        "due_date": "2025-09-30",
+        "service_start_date": "2025-09-01",
+        "service_end_date": "2025-09-30",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "10000.000000 PHP",
+        "net_amount": "10000.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDowQ0U4M0ZGRS1FREE0LTQ2OEItODM0MS1DNEU3MUQ4OTY2NzM6M2UzZTMzMWYwMGE2MWUzMDVkMDZlMjU0YmI2MTQ0Zjc6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202510170001",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-09-01 00:00:00",
+        "billing_end": "2025-09-30 00:00:00",
+        "due_date": "2025-09-30 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Admin Payment | Payables Amount-Gross:10000.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:10000.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDoxQUQzQjM1OS0xNURBLTQ4NUQtODMwNS03NUVEODJDMUVFQ0U6ZmRmNDZmZWY0ZjM3ODg5M2JhNzYyN2NhNjhiZjc2MGY6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202510170001",
+        "bill_date": "2025-09-01",
+        "due_date": "2025-09-30",
+        "service_start_date": "2025-09-01",
+        "service_end_date": "2025-09-30",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "10000.000000 PHP",
+        "net_amount": "10000.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDoxQUQzQjM1OS0xNURBLTQ4NUQtODMwNS03NUVEODJDMUVFQ0U6ZmRmNDZmZWY0ZjM3ODg5M2JhNzYyN2NhNjhiZjc2MGY6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202510040001",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-10-13 00:00:00",
+        "billing_end": "2025-10-17 00:00:00",
+        "due_date": "2025-10-06 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Admin Payment | Payables Amount-Gross:6500.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:6500.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDoxOEEzQzY5My03NUMzLTQ2MjgtOURDMy1BRDlBRUI1REQwNDU6ZDZlZTRiY2ViY2NjNDBmM2YyY2EwODU3MTY3ZDk1OTE6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202510040001",
+        "bill_date": "2025-10-13",
+        "due_date": "2025-10-06",
+        "service_start_date": "2025-10-13",
+        "service_end_date": "2025-10-17",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "6500.000000 PHP",
+        "net_amount": "6500.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDoxOEEzQzY5My03NUMzLTQ2MjgtOURDMy1BRDlBRUI1REQwNDU6ZDZlZTRiY2ViY2NjNDBmM2YyY2EwODU3MTY3ZDk1OTE6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202510030003",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-08-01 00:00:00",
+        "billing_end": "2025-08-31 00:00:00",
+        "due_date": "2025-08-31 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Admin Payment | Payables Amount-Gross:5000.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:5000.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDo4NDNCMzI4Ni1GNUNBLTQzRjQtODY1OS1FRDQ1MzlDMjIyNDc6MDc1ZDcwYzRkZDI0YzAzZmFmNzIzNDIyZGM2ZjMzY2Y6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202510030003",
+        "bill_date": "2025-08-01",
+        "due_date": "2025-08-31",
+        "service_start_date": "2025-08-01",
+        "service_end_date": "2025-08-31",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "5000.000000 PHP",
+        "net_amount": "5000.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDo4NDNCMzI4Ni1GNUNBLTQzRjQtODY1OS1FRDQ1MzlDMjIyNDc6MDc1ZDcwYzRkZDI0YzAzZmFmNzIzNDIyZGM2ZjMzY2Y6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202510030002",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-10-01 00:00:00",
+        "billing_end": "2025-10-31 00:00:00",
+        "due_date": "2025-10-04 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Admin Payment | Payables Amount-Gross:600.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:600.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDo3REY5MTY0Ny1DQURDLTQ1MUMtODRDNC0wMDVCRTc1QUUxQjU6MTA2MDZhOWYyZmFlMzJkMjNmZjBjODM4MDVkZDVkYWQ6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202510030002",
+        "bill_date": "2025-10-01",
+        "due_date": "2025-10-04",
+        "service_start_date": "2025-10-01",
+        "service_end_date": "2025-10-31",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "600.000000 PHP",
+        "net_amount": "600.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDo3REY5MTY0Ny1DQURDLTQ1MUMtODRDNC0wMDVCRTc1QUUxQjU6MTA2MDZhOWYyZmFlMzJkMjNmZjBjODM4MDVkZDVkYWQ6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202509100001",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-07-01 00:00:00",
+        "billing_end": "2025-07-31 00:00:00",
+        "due_date": "2025-08-31 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Admin Payment | Payables Amount-Gross:5000.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:5000.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDozOUEzOTQ4RC03NUZELTRBRTQtQjhENC04NTc3ODA2OTgzNDE6NThhZWIwMzI4ODZkNmIzZWExYjA2M2ZhMjZiMWM4MjA6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202509100001",
+        "bill_date": "2025-07-01",
+        "due_date": "2025-08-31",
+        "service_start_date": "2025-07-01",
+        "service_end_date": "2025-07-31",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "5000.000000 PHP",
+        "net_amount": "5000.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDozOUEzOTQ4RC03NUZELTRBRTQtQjhENC04NTc3ODA2OTgzNDE6NThhZWIwMzI4ODZkNmIzZWExYjA2M2ZhMjZiMWM4MjA6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202509060002",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-08-01 00:00:00",
+        "billing_end": "2025-08-31 00:00:00",
+        "due_date": "2025-08-31 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Admin Payment | Payables Amount-Gross:10000.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:10000.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDozNzhDRDI0My02RUFBLTQ1QTEtQTlBRS1CRjIxOEE1RDYxRTY6ODJiNjA5NzVlOWI2OTQ0NTJlZjhhMWE5OGNiM2E2YTY6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202509060002",
+        "bill_date": "2025-08-01",
+        "due_date": "2025-08-31",
+        "service_start_date": "2025-08-01",
+        "service_end_date": "2025-08-31",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "10000.000000 PHP",
+        "net_amount": "10000.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDozNzhDRDI0My02RUFBLTQ1QTEtQTlBRS1CRjIxOEE1RDYxRTY6ODJiNjA5NzVlOWI2OTQ0NTJlZjhhMWE5OGNiM2E2YTY6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202509060001",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-08-01 00:00:00",
+        "billing_end": "2025-08-31 00:00:00",
+        "due_date": "2025-08-31 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Admin Payment | Payables Amount-Gross:10000.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:10000.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDo2QkYzMzJDQS02RTk5LTREMjAtQTE3OS05M0E2NzJDRTRFQkU6NWEzZTJmODlhMmM2ODc0NzFlMDVkYjQ2NGEwZDk5NTM6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202509060001",
+        "bill_date": "2025-08-01",
+        "due_date": "2025-08-31",
+        "service_start_date": "2025-08-01",
+        "service_end_date": "2025-08-31",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "10000.000000 PHP",
+        "net_amount": "10000.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDo2QkYzMzJDQS02RTk5LTREMjAtQTE3OS05M0E2NzJDRTRFQkU6NWEzZTJmODlhMmM2ODc0NzFlMDVkYjQ2NGEwZDk5NTM6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202509020011",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-06-01 00:00:00",
+        "billing_end": "2025-06-30 00:00:00",
+        "due_date": "2025-07-25 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Mandatory Benefits | Payables Amount-Gross:3736.800000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:3736.800000;\n\nPayment Type:Mandatory Benefits | Payables Amount-Gross:540.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:540.000000;\n\nPayment Type:Mandatory Benefits | Payables Amount-Gross:432.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:432.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDowMDU5QkM3OS0yOTY2LTQ5RDMtOEExNC02NzIzRDgwRDI3MTE6NmNmOGVmNjE1ODM5ZjJkNTgxNmIzNjQyNGQ5ZDY1YzY6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202509020011",
+        "bill_date": "2025-06-01",
+        "due_date": "2025-07-25",
+        "service_start_date": "2025-06-01",
+        "service_end_date": "2025-06-30",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "3736.800000 PHP",
+        "net_amount": "3736.800000;\n\nPayment Type:Mandatory Benefits",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDowMDU5QkM3OS0yOTY2LTQ5RDMtOEExNC02NzIzRDgwRDI3MTE6NmNmOGVmNjE1ODM5ZjJkNTgxNmIzNjQyNGQ5ZDY1YzY6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202509020010",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-05-01 00:00:00",
+        "billing_end": "2025-05-31 00:00:00",
+        "due_date": "2025-06-25 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Mandatory Benefits | Payables Amount-Gross:3736.800000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:3736.800000;\n\nPayment Type:Mandatory Benefits | Payables Amount-Gross:540.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:540.000000;\n\nPayment Type:Mandatory Benefits | Payables Amount-Gross:432.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:432.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDo3MjMxOENCNy0wN0RGLTQ5QTYtOTQwNS0xODAxMzM0RTMwRTE6Mzk3OGE4ZGFhN2MxNGZhYzdhODc3YTY2OTAzOWQwYWU6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202509020010",
+        "bill_date": "2025-05-01",
+        "due_date": "2025-06-25",
+        "service_start_date": "2025-05-01",
+        "service_end_date": "2025-05-31",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "3736.800000 PHP",
+        "net_amount": "3736.800000;\n\nPayment Type:Mandatory Benefits",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDo3MjMxOENCNy0wN0RGLTQ5QTYtOTQwNS0xODAxMzM0RTMwRTE6Mzk3OGE4ZGFhN2MxNGZhYzdhODc3YTY2OTAzOWQwYWU6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202509020008",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-07-01 00:00:00",
+        "billing_end": "2025-07-31 00:00:00",
+        "due_date": "2025-08-25 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Admin Payment | Payables Amount-Gross:1080.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:1080.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDo5QUUyRDUyMi1FRkFCLTQ1MEQtQUNEQi05ODU2RTJDOUU1RDk6NDkxOTExYjQ0MmZhZjEyNGJkNmY1OTk0Y2ZhYTVkOTQ6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202509020008",
+        "bill_date": "2025-07-01",
+        "due_date": "2025-08-25",
+        "service_start_date": "2025-07-01",
+        "service_end_date": "2025-07-31",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "1080.000000 PHP",
+        "net_amount": "1080.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDo5QUUyRDUyMi1FRkFCLTQ1MEQtQUNEQi05ODU2RTJDOUU1RDk6NDkxOTExYjQ0MmZhZjEyNGJkNmY1OTk0Y2ZhYTVkOTQ6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202509020007",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-08-01 00:00:00",
+        "billing_end": "2025-08-15 00:00:00",
+        "due_date": "2025-09-25 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Payroll Payment- Xinofi | Payables Amount-Gross:19458.770000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:19458.770000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDowMDA4MkM3Qy0xNTI1LTQ4ODItOUZCMC01MDQ4QjAyNzM5RDY6MTlhMTVjODExNDQzNGMwZDJhY2RjOWQwYTJmN2UzZDQ6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202509020007",
+        "bill_date": "2025-08-01",
+        "due_date": "2025-09-25",
+        "service_start_date": "2025-08-01",
+        "service_end_date": "2025-08-15",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "19458.770000 PHP",
+        "net_amount": "19458.770000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDowMDA4MkM3Qy0xNTI1LTQ4ODItOUZCMC01MDQ4QjAyNzM5RDY6MTlhMTVjODExNDQzNGMwZDJhY2RjOWQwYTJmN2UzZDQ6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202509020006",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-07-16 00:00:00",
+        "billing_end": "2025-07-31 00:00:00",
+        "due_date": "2025-09-09 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Payroll Payment- Xinofi | Payables Amount-Gross:20800.800000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:20800.800000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpFQUQyOUNGMS1DODA1LTREMDctODhGRC1FNTgzMDg3QURGRDg6ZGY3YzE5NWUwYTA5NzAwZWQxOGE4YWFlNDA0ZmUwNTM6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202509020006",
+        "bill_date": "2025-07-16",
+        "due_date": "2025-09-09",
+        "service_start_date": "2025-07-16",
+        "service_end_date": "2025-07-31",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "20800.800000 PHP",
+        "net_amount": "20800.800000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpFQUQyOUNGMS1DODA1LTREMDctODhGRC1FNTgzMDg3QURGRDg6ZGY3YzE5NWUwYTA5NzAwZWQxOGE4YWFlNDA0ZmUwNTM6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202509020005",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-07-01 00:00:00",
+        "billing_end": "2025-07-15 00:00:00",
+        "due_date": "2025-08-25 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Payroll Payment- Xinofi | Payables Amount-Gross:18111.600000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:18111.600000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpBQUM5OUQ4Qi1CNzY5LTQ2NkMtOEM3Ny1DQzc0N0I0ODFCOEY6ZTBjNzZiOGFiNzk0YjdiMTJhYzk0NmMwZTA1M2EwMGM6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202509020005",
+        "bill_date": "2025-07-01",
+        "due_date": "2025-08-25",
+        "service_start_date": "2025-07-01",
+        "service_end_date": "2025-07-15",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "18111.600000 PHP",
+        "net_amount": "18111.600000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpBQUM5OUQ4Qi1CNzY5LTQ2NkMtOEM3Ny1DQzc0N0I0ODFCOEY6ZTBjNzZiOGFiNzk0YjdiMTJhYzk0NmMwZTA1M2EwMGM6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202509020004",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-06-16 00:00:00",
+        "billing_end": "2025-06-30 00:00:00",
+        "due_date": "2025-08-09 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Payroll Payment- Xinofi | Payables Amount-Gross:18111.600000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:18111.600000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpCMzQzRDYxQy0zRUZCLTQ3MzMtQUZDMy0xRUMyOTYwRjNFMDU6YzI1MWUwMjhjNjU2YjViOTQ1Nzk1MzY3NTIwZjIwNDU6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202509020004",
+        "bill_date": "2025-06-16",
+        "due_date": "2025-08-09",
+        "service_start_date": "2025-06-16",
+        "service_end_date": "2025-06-30",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "18111.600000 PHP",
+        "net_amount": "18111.600000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpCMzQzRDYxQy0zRUZCLTQ3MzMtQUZDMy0xRUMyOTYwRjNFMDU6YzI1MWUwMjhjNjU2YjViOTQ1Nzk1MzY3NTIwZjIwNDU6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202509020003",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-06-01 00:00:00",
+        "billing_end": "2025-06-15 00:00:00",
+        "due_date": "2025-07-25 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Payroll Payment- Xinofi | Payables Amount-Gross:18111.600000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:18111.600000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDoyQkFFNkQ3NC00QUUxLTRGMDEtQURCOC0xRTM4ODU0QzU2Nzk6YTgyNDUyNjRkNTYwYmUxZTFiNjdhNzNjODFhMGZjMzU6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202509020003",
+        "bill_date": "2025-06-01",
+        "due_date": "2025-07-25",
+        "service_start_date": "2025-06-01",
+        "service_end_date": "2025-06-15",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "18111.600000 PHP",
+        "net_amount": "18111.600000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDoyQkFFNkQ3NC00QUUxLTRGMDEtQURCOC0xRTM4ODU0QzU2Nzk6YTgyNDUyNjRkNTYwYmUxZTFiNjdhNzNjODFhMGZjMzU6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202509020002",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-05-16 00:00:00",
+        "billing_end": "2025-05-31 00:00:00",
+        "due_date": "2025-07-10 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Payroll Payment- Xinofi | Payables Amount-Gross:18111.600000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:18111.600000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpFMjkxMjRCOC0zNDI0LTQxNDItQTE4NS02OEJGNzMzMzkyQzc6YmVkMDNkZWM4ODRiMGVlNWFjNTUwOGMzMzA5ODA4Njk6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202509020002",
+        "bill_date": "2025-05-16",
+        "due_date": "2025-07-10",
+        "service_start_date": "2025-05-16",
+        "service_end_date": "2025-05-31",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "18111.600000 PHP",
+        "net_amount": "18111.600000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpFMjkxMjRCOC0zNDI0LTQxNDItQTE4NS02OEJGNzMzMzkyQzc6YmVkMDNkZWM4ODRiMGVlNWFjNTUwOGMzMzA5ODA4Njk6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202508280001",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-09-01 00:00:00",
+        "billing_end": "2025-09-30 00:00:00",
+        "due_date": "2025-09-01 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Admin Payment | Payables Amount-Gross:600.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:600.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpFRjc1NENGRS02MTNCLTQxQjEtOTRBQi00MkQwNERBQjlENzc6OTViNjRkYzQxMTgyYmVhYmI0MWJmMGExY2M2MzYzYjc6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202508280001",
+        "bill_date": "2025-09-01",
+        "due_date": "2025-09-01",
+        "service_start_date": "2025-09-01",
+        "service_end_date": "2025-09-30",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "600.000000 PHP",
+        "net_amount": "600.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpFRjc1NENGRS02MTNCLTQxQjEtOTRBQi00MkQwNERBQjlENzc6OTViNjRkYzQxMTgyYmVhYmI0MWJmMGExY2M2MzYzYjc6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202508230002",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-05-01 00:00:00",
+        "billing_end": "2026-04-30 00:00:00",
+        "due_date": "2026-04-30 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Admin Payment | Payables Amount-Gross:32000.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:32000.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDoxQjc1QjhBMy1GMjc1LTQ5MzAtOTZGOS1GNTkxOEY3NzgyODY6ZTQ1ZTgyZjA5NzBmYWU2MGYzZWY0ZDBmZjkyOTdlN2Y6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202508230002",
+        "bill_date": "2025-05-01",
+        "due_date": "2026-04-30",
+        "service_start_date": "2025-05-01",
+        "service_end_date": "2026-04-30",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "32000.000000 PHP",
+        "net_amount": "32000.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDoxQjc1QjhBMy1GMjc1LTQ5MzAtOTZGOS1GNTkxOEY3NzgyODY6ZTQ1ZTgyZjA5NzBmYWU2MGYzZWY0ZDBmZjkyOTdlN2Y6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202508230001",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-04-01 00:00:00",
+        "billing_end": "2025-10-01 00:00:00",
+        "due_date": "2025-10-01 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Admin Payment | Payables Amount-Gross:25000.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:25000.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDo2QzM3Mzc2MC0wRUFFLTQ4MUQtQkQ0NS1DNTgwRkJGQzcyOUU6ODIyNjM5M2I2ZTgzN2JjMDhkYzRkY2NmMTRmZWVhYTg6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202508230001",
+        "bill_date": "2025-04-01",
+        "due_date": "2025-10-01",
+        "service_start_date": "2025-04-01",
+        "service_end_date": "2025-10-01",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "25000.000000 PHP",
+        "net_amount": "25000.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDo2QzM3Mzc2MC0wRUFFLTQ4MUQtQkQ0NS1DNTgwRkJGQzcyOUU6ODIyNjM5M2I2ZTgzN2JjMDhkYzRkY2NmMTRmZWVhYTg6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202508190001",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-08-19 00:00:00",
+        "billing_end": "2025-08-19 00:00:00",
+        "due_date": "2025-08-19 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Admin Payment | Payables Amount-Gross:5421.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:5421.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDo3RkUxMkI0QS0yNjJELTRCNjEtQjA4MS0yMjQ4NDQyQjNBRDE6NWU1MjViYzIyYTBiMTYwNWQ1ZDRjNjY2ODQxOGEyMzM6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202508190001",
+        "bill_date": "2025-08-19",
+        "due_date": "2025-08-19",
+        "service_start_date": "2025-08-19",
+        "service_end_date": "2025-08-19",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "5421.000000 PHP",
+        "net_amount": "5421.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDo3RkUxMkI0QS0yNjJELTRCNjEtQjA4MS0yMjQ4NDQyQjNBRDE6NWU1MjViYzIyYTBiMTYwNWQ1ZDRjNjY2ODQxOGEyMzM6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202508120003",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-08-18 00:00:00",
+        "billing_end": "2025-08-26 00:00:00",
+        "due_date": "2025-08-18 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Admin Payment | Payables Amount-Gross:11000.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:11000.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDoyM0VDMDg2NS0wREU2LTRGNDctQUM4RC04Mzg0NjJEMTRGNjQ6ZjNmODM0ZjE3ZmFlMTUxZGYxNWMwODY3MDJlZmE4Nzc6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202508120003",
+        "bill_date": "2025-08-18",
+        "due_date": "2025-08-18",
+        "service_start_date": "2025-08-18",
+        "service_end_date": "2025-08-26",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "11000.000000 PHP",
+        "net_amount": "11000.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDoyM0VDMDg2NS0wREU2LTRGNDctQUM4RC04Mzg0NjJEMTRGNjQ6ZjNmODM0ZjE3ZmFlMTUxZGYxNWMwODY3MDJlZmE4Nzc6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202508120001",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-07-21 00:00:00",
+        "billing_end": "2025-07-21 00:00:00",
+        "due_date": "2025-07-21 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Admin Payment | Payables Amount-Gross:1000.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:1000.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpDNzkwQzlGRS0yMDUyLTQ4OTgtODZCNS01NjgzMTA2RUI0RkQ6NTkxMTAzMTgzYTcwZDkxYWVmMTI4MWUzYjk1NDkyMGI6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202508120001",
+        "bill_date": "2025-07-21",
+        "due_date": "2025-07-21",
+        "service_start_date": "2025-07-21",
+        "service_end_date": "2025-07-21",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "1000.000000 PHP",
+        "net_amount": "1000.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpDNzkwQzlGRS0yMDUyLTQ4OTgtODZCNS01NjgzMTA2RUI0RkQ6NTkxMTAzMTgzYTcwZDkxYWVmMTI4MWUzYjk1NDkyMGI6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202508040001",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-07-28 00:00:00",
+        "billing_end": "2025-07-28 00:00:00",
+        "due_date": "2025-07-28 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Admin Payment | Payables Amount-Gross:200.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:200.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDoyMTdGRDc2MC03OUQ2LTQ2MUMtOTlGQS1CN0RFNzVDNUIwMjU6N2Y0NmU1NTU3MzU1ZGUzYTNjMWNjZmM3ZmUzMDQ5OTU6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202508040001",
+        "bill_date": "2025-07-28",
+        "due_date": "2025-07-28",
+        "service_start_date": "2025-07-28",
+        "service_end_date": "2025-07-28",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "200.000000 PHP",
+        "net_amount": "200.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDoyMTdGRDc2MC03OUQ2LTQ2MUMtOTlGQS1CN0RFNzVDNUIwMjU6N2Y0NmU1NTU3MzU1ZGUzYTNjMWNjZmM3ZmUzMDQ5OTU6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202507270007",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-07-01 00:00:00",
+        "billing_end": "2025-07-31 00:00:00",
+        "due_date": "2025-07-31 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Admin Payment | Payables Amount-Gross:10000.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:10000.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDo1M0Q0MjgwMi02QjVFLTQ4QUQtOUE2Qy1ENDRGRTdDMEFENkE6N2ExNGE5OTk4OTFkNzIxNDllODA2NjkzZWExMTg5ZmM6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202507270007",
+        "bill_date": "2025-07-01",
+        "due_date": "2025-07-31",
+        "service_start_date": "2025-07-01",
+        "service_end_date": "2025-07-31",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "10000.000000 PHP",
+        "net_amount": "10000.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDo1M0Q0MjgwMi02QjVFLTQ4QUQtOUE2Qy1ENDRGRTdDMEFENkE6N2ExNGE5OTk4OTFkNzIxNDllODA2NjkzZWExMTg5ZmM6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202507270006",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-07-01 00:00:00",
+        "billing_end": "2025-07-31 00:00:00",
+        "due_date": "2025-07-31 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Admin Payment | Payables Amount-Gross:10000.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:10000.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDowNEVGNUREMi00MDE5LTRGQzQtQjczNC0zQzI5NTdGQzU5NUQ6OWY4NGM4MWZkZTY1MWE0N2M5YzMwM2ViMmE3MmNkYjg6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202507270006",
+        "bill_date": "2025-07-01",
+        "due_date": "2025-07-31",
+        "service_start_date": "2025-07-01",
+        "service_end_date": "2025-07-31",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "10000.000000 PHP",
+        "net_amount": "10000.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDowNEVGNUREMi00MDE5LTRGQzQtQjczNC0zQzI5NTdGQzU5NUQ6OWY4NGM4MWZkZTY1MWE0N2M5YzMwM2ViMmE3MmNkYjg6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202507270005",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-06-01 00:00:00",
+        "billing_end": "2025-06-30 00:00:00",
+        "due_date": "2025-06-30 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Admin Payment | Payables Amount-Gross:10000.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:10000.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDowREQ5RTA4Qi0zRkVFLTQwNTMtQjU3NC0yQzE5Q0JGMTk1Mzk6OWRmMzFjNGE0NjA2YmI2NTlmYWYyMjY1MTQwYWY4YmY6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202507270005",
+        "bill_date": "2025-06-01",
+        "due_date": "2025-06-30",
+        "service_start_date": "2025-06-01",
+        "service_end_date": "2025-06-30",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "10000.000000 PHP",
+        "net_amount": "10000.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDowREQ5RTA4Qi0zRkVFLTQwNTMtQjU3NC0yQzE5Q0JGMTk1Mzk6OWRmMzFjNGE0NjA2YmI2NTlmYWYyMjY1MTQwYWY4YmY6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202507270004",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-06-01 00:00:00",
+        "billing_end": "2025-06-30 00:00:00",
+        "due_date": "2025-06-30 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Admin Payment | Payables Amount-Gross:10000.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:10000.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpGOEE4RjY5OS0zREU2LTRBREYtQjUxOS01MTU2Qjg4QTg2MTc6YmEzNjc1MzhhYWFiNzc5ZDMxNjM1MDBmOTRhN2NmZGY6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202507270004",
+        "bill_date": "2025-06-01",
+        "due_date": "2025-06-30",
+        "service_start_date": "2025-06-01",
+        "service_end_date": "2025-06-30",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "10000.000000 PHP",
+        "net_amount": "10000.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpGOEE4RjY5OS0zREU2LTRBREYtQjUxOS01MTU2Qjg4QTg2MTc6YmEzNjc1MzhhYWFiNzc5ZDMxNjM1MDBmOTRhN2NmZGY6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202507270003",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-05-01 00:00:00",
+        "billing_end": "2025-05-31 00:00:00",
+        "due_date": "2025-05-31 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Admin Payment | Payables Amount-Gross:10000.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:10000.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpCREM4QkYwQS0wNUNDLTQxNEUtQjBDMi0yQjU3QUM0ODEyNzQ6NjU0NzE1NmZhZWJmZWExOTdkMmFjZGY3NzY0MjEzYjk6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202507270003",
+        "bill_date": "2025-05-01",
+        "due_date": "2025-05-31",
+        "service_start_date": "2025-05-01",
+        "service_end_date": "2025-05-31",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "10000.000000 PHP",
+        "net_amount": "10000.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpCREM4QkYwQS0wNUNDLTQxNEUtQjBDMi0yQjU3QUM0ODEyNzQ6NjU0NzE1NmZhZWJmZWExOTdkMmFjZGY3NzY0MjEzYjk6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202507270002",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-05-01 00:00:00",
+        "billing_end": "2025-05-31 00:00:00",
+        "due_date": "2025-05-31 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Admin Payment | Payables Amount-Gross:10000.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:10000.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpBRDM5NUZGNS1BQzhCLTQ0MTktOTJDMS03NTYzNTNGMDc4MjA6NGYxYjliOWI0N2JjZDhiNWEwZDY2MjViZTQ3NzUzNTI6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202507270002",
+        "bill_date": "2025-05-01",
+        "due_date": "2025-05-31",
+        "service_start_date": "2025-05-01",
+        "service_end_date": "2025-05-31",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "10000.000000 PHP",
+        "net_amount": "10000.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpBRDM5NUZGNS1BQzhCLTQ0MTktOTJDMS03NTYzNTNGMDc4MjA6NGYxYjliOWI0N2JjZDhiNWEwZDY2MjViZTQ3NzUzNTI6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202507270001",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-04-01 00:00:00",
+        "billing_end": "2025-04-30 00:00:00",
+        "due_date": "2025-04-30 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Admin Payment | Payables Amount-Gross:10000.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:10000.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDoyRUZBMDUyRi1ENDZDLTQ1Q0MtQkI3RC01Q0VFMkJDQUI3QUQ6M2E3Yzc4NzA0ODYwYWUxMWYyYzRjNzllNzI3MDIyZWI6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202507270001",
+        "bill_date": "2025-04-01",
+        "due_date": "2025-04-30",
+        "service_start_date": "2025-04-01",
+        "service_end_date": "2025-04-30",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "10000.000000 PHP",
+        "net_amount": "10000.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDoyRUZBMDUyRi1ENDZDLTQ1Q0MtQkI3RC01Q0VFMkJDQUI3QUQ6M2E3Yzc4NzA0ODYwYWUxMWYyYzRjNzllNzI3MDIyZWI6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202507250008",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-08-01 00:00:00",
+        "billing_end": "2025-08-31 00:00:00",
+        "due_date": "2025-08-31 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Other Payment | Payables Amount-Gross:600.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:600.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpGMDFFMUY4OS04QTMyLTQ3NUMtQkYxMS1ERkQxNkNBNTlFQjQ6ZTQ0ZTQyMjQ4NDFjMWQzZTJhYjkwYjllMzBiN2I1ZDU6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202507250008",
+        "bill_date": "2025-08-01",
+        "due_date": "2025-08-31",
+        "service_start_date": "2025-08-01",
+        "service_end_date": "2025-08-31",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "600.000000 PHP",
+        "net_amount": "600.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpGMDFFMUY4OS04QTMyLTQ3NUMtQkYxMS1ERkQxNkNBNTlFQjQ6ZTQ0ZTQyMjQ4NDFjMWQzZTJhYjkwYjllMzBiN2I1ZDU6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202507180001",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-07-14 00:00:00",
+        "billing_end": "2025-07-14 00:00:00",
+        "due_date": "2025-07-14 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Other Payment | Payables Amount-Gross:135.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:135.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDo1QjU4RkQ5Ny01REZBLTQ1MjktOTY0Ri1CMzM2NTVDMzQ1OTc6OTZkMjg0YzY0ODU2OTU5NjA1NmFiYjcyMTBhZTc5NTk6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202507180001",
+        "bill_date": "2025-07-14",
+        "due_date": "2025-07-14",
+        "service_start_date": "2025-07-14",
+        "service_end_date": "2025-07-14",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "135.000000 PHP",
+        "net_amount": "135.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDo1QjU4RkQ5Ny01REZBLTQ1MjktOTY0Ri1CMzM2NTVDMzQ1OTc6OTZkMjg0YzY0ODU2OTU5NjA1NmFiYjcyMTBhZTc5NTk6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202507170002",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-07-04 00:00:00",
+        "billing_end": "2026-07-04 00:00:00",
+        "due_date": "2025-07-04 00:00:00",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Payment Type:Other Payment | Payables Amount-Gross:1926.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:1926.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpDMDJBMDk4NC0wQzgxLTRGMTgtQkJBNS1CRDFFQTlCMkM2MDc6YWRmYWUyYzFmYjA2OTU5ODdhMTQ4ZjA4OTg1YTA1ZmU6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202507170002",
+        "bill_date": "2025-07-04",
+        "due_date": "2025-07-04",
+        "service_start_date": "2025-07-04",
+        "service_end_date": "2026-07-04",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "1926.000000 PHP",
+        "net_amount": "1926.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpDMDJBMDk4NC0wQzgxLTRGMTgtQkJBNS1CRDFFQTlCMkM2MDc6YWRmYWUyYzFmYjA2OTU5ODdhMTQ4ZjA4OTg1YTA1ZmU6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202507150001",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-07-15 00:00:00",
+        "billing_end": "2025-07-15 00:00:00",
+        "due_date": "NaT",
+        "vat_in_ex": "VAT IN",
+        "details_01": "Due date:2025-07-15 00:00:00 | Payment Type:Purchase Supplier | Payables Amount-Gross:19600.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:2100.000000 PHP | Net Amount-PHP:19600.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpBMjc2QTA1OS0zMjQ4LTRGM0QtOTExNi1BRUMzMjVGRUQ4RDA6NDc1NmY3OTg0OTVmODUyNGRmYjZlZjY5NGQ4YWYwYTc6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202507150001",
+        "bill_date": "2025-07-15",
+        "due_date": "",
+        "service_start_date": "2025-07-15",
+        "service_end_date": "2025-07-15",
+        "location_code": "HO",
+        "tax_mode": "VAT IN",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "2100.000000 PHP",
+        "gross_amount": "19600.000000 PHP",
+        "net_amount": "19600.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpBMjc2QTA1OS0zMjQ4LTRGM0QtOTExNi1BRUMzMjVGRUQ4RDA6NDc1NmY3OTg0OTVmODUyNGRmYjZlZjY5NGQ4YWYwYTc6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202507110001",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-07-01 00:00:00",
+        "billing_end": "2025-07-31 00:00:00",
+        "due_date": "NaT",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Due date:2025-07-05 00:00:00 | Payment Type:Other Payment | Payables Amount-Gross:600.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:600.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpGM0FFRDU2OC04QUNDLTRDM0QtQkVDQS1CNzNFOThBRjYzREQ6NDEzYWE3MWI5YzdmNmYzZTI0OTdlMjcyOGE5NGNmODk6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202507110001",
+        "bill_date": "2025-07-01",
+        "due_date": "",
+        "service_start_date": "2025-07-01",
+        "service_end_date": "2025-07-31",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "600.000000 PHP",
+        "net_amount": "600.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpGM0FFRDU2OC04QUNDLTRDM0QtQkVDQS1CNzNFOThBRjYzREQ6NDEzYWE3MWI5YzdmNmYzZTI0OTdlMjcyOGE5NGNmODk6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202506270001",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-06-05 00:00:00",
+        "billing_end": "2025-06-05 00:00:00",
+        "due_date": "NaT",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Due date:2025-06-05 00:00:00 | Payment Type:Other Payment | Payables Amount-Gross:600.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:600.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDo1RUJEOTIwMy1BNzU4LTQwMEItQjc4Mi1CNUQ2NDk2MDk3Qjc6NWI5YTQ5ZjNkYWVlYzJiYTMyOWE3YjI0NmEzNjRiZjc6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202506270001",
+        "bill_date": "2025-06-05",
+        "due_date": "",
+        "service_start_date": "2025-06-05",
+        "service_end_date": "2025-06-05",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "600.000000 PHP",
+        "net_amount": "600.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDo1RUJEOTIwMy1BNzU4LTQwMEItQjc4Mi1CNUQ2NDk2MDk3Qjc6NWI5YTQ5ZjNkYWVlYzJiYTMyOWE3YjI0NmEzNjRiZjc6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202506240001",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-06-16 00:00:00",
+        "billing_end": "2025-06-16 00:00:00",
+        "due_date": "NaT",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Due date:2025-06-16 00:00:00 | Payment Type:Admin Payment | Payables Amount-Gross:164.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:164.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDo3MEFGNDE2RC00NkMyLTQ0QzItQjUyRS1BRUYwQzYyQjcxMjY6MDlhNWU4ZDRkNGZhZjUzZGE1MTVkZjVhMzBmM2JhNTQ6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202506240001",
+        "bill_date": "2025-06-16",
+        "due_date": "",
+        "service_start_date": "2025-06-16",
+        "service_end_date": "2025-06-16",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "164.000000 PHP",
+        "net_amount": "164.000000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDo3MEFGNDE2RC00NkMyLTQ0QzItQjUyRS1BRUYwQzYyQjcxMjY6MDlhNWU4ZDRkNGZhZjUzZGE1MTVkZjVhMzBmM2JhNTQ6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202506110001",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-05-01 00:00:00",
+        "billing_end": "2025-05-15 00:00:00",
+        "due_date": "NaT",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Due date:2025-06-25 00:00:00 | Payment Type:Payroll Payment- Xinofi | Payables Amount-Gross:18111.600000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:18111.600000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpFMkIyMDY1RC1BRjk5LTQxNTctQTlBNi0yRUJENzk3NjVGRTU6ZjMxOTJkMjBjOTBhOWI1NzdlY2U1NzBhZWExNzZkYzc6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202506110001",
+        "bill_date": "2025-05-01",
+        "due_date": "",
+        "service_start_date": "2025-05-01",
+        "service_end_date": "2025-05-15",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "18111.600000 PHP",
+        "net_amount": "18111.600000",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpFMkIyMDY1RC1BRjk5LTQxNTctQTlBNi0yRUJENzk3NjVGRTU6ZjMxOTJkMjBjOTBhOWI1NzdlY2U1NzBhZWExNzZkYzc6MQ=="
+      }
+    },
+    {
+      "source": {
+        "request_no": "202506050002",
+        "status": "Approved",
+        "belongs_to": "HO",
+        "billing_start": "2025-06-03 00:00:00",
+        "billing_end": "2025-06-03 00:00:00",
+        "due_date": "NaT",
+        "vat_in_ex": "VAT EX",
+        "details_01": "Due date:2025-06-03 00:00:00 | Payment Type:Other Payment | Payables Amount-Gross:290.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:290.000000;\n\nDue date:2025-06-03 00:00:00 | Payment Type:Other Payment | Payables Amount-Gross:121.000000 PHP | 2307 Rate:0% | 2307 Amount:0.000000 PHP | VAT Amount:0.000000 PHP | Net Amount-PHP:121.000000",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpCMTg4NDhGRC1BNzVFLTRDQjItQkM4Ni0wOTNERTk0RjI4NEQ6NTQ0NmU0NzEzOGQ4M2E2Y2NiZjk4MWE2ZGQ1ODQ1MmE6MQ=="
+      },
+      "mapped_bill_preview": {
+        "kind": "bill",
+        "client_ref": "PR-202506050002",
+        "bill_date": "2025-06-03",
+        "due_date": "",
+        "service_start_date": "2025-06-03",
+        "service_end_date": "2025-06-03",
+        "location_code": "HO",
+        "tax_mode": "VAT EX",
+        "wht_2307_rate": "0%",
+        "wht_2307_amount": "0.000000 PHP",
+        "vat_amount": "0.000000 PHP",
+        "gross_amount": "290.000000 PHP",
+        "net_amount": "290.000000;\n\nDue date:2025-06-03 00:00:00",
+        "memo": "[AI_AGENT][adv-qbo-tool] Excel mapped preview only, not submitted",
+        "source_id": "NzUyODI3MTc2MzI2OTkyNjkxNDpCMTg4NDhGRC1BNzVFLTRDQjItQkM4Ni0wOTNERTk0RjI4NEQ6NTQ0NmU0NzEzOGQ4M2E2Y2NiZjk4MWE2ZGQ1ODQ1MmE6MQ=="
+      }
+    }
+  ]
+}

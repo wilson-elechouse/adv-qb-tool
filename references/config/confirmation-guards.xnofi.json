@@ -1,0 +1,15 @@
+{
+  "version": "2026-02-21",
+  "guards": [
+    "missing_due_date",
+    "due_date_before_bill_date",
+    "unknown_payment_type",
+    "unmapped_category",
+    "amount_parse_failed",
+    "location_unmapped",
+    "vendor_unmapped",
+    "tax_mode_missing"
+  ],
+  "action": "stop_and_ask_user",
+  "notes": "Do not auto-correct business fields. Produce confirmation checklist and wait for explicit user approval."
+}
