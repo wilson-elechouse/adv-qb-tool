@@ -77,6 +77,14 @@ def main():
         else:
             progress_text = f"Job state is {state.get('state')}."
 
+    needs_user_action_count = int(report.get("needs_user_action_count") or 0)
+    auto_continue_ready = (
+        (summary.get("state") or state.get("state")) == "WAIT_NEXT_BATCH"
+        and not running
+        and int(report.get("failed_count") or 0) == 0
+        and needs_user_action_count == 0
+    )
+
     out = {
         "ok": True,
         "mode": "chunked_job_status",
@@ -90,10 +98,16 @@ def main():
         "success_count": report.get("success_count"),
         "failed_count": report.get("failed_count"),
         "pending_count": report.get("pending_count"),
+        "needs_user_action_count": needs_user_action_count,
+        "can_auto_continue": report.get("can_auto_continue"),
+        "auto_continue_ready": auto_continue_ready,
         "failure_reason_summary": report.get("failure_reason_summary") or {},
         "report_file": str(report_path) if report_path.exists() else None,
         "process_running": running,
         "pid": control.get("pid"),
+        "job_control_status": control.get("status"),
+        "auto_continue_seconds": control.get("auto_continue_seconds"),
+        "auto_continue_at": control.get("auto_continue_at"),
         "stdout_log": str(stdout_log) if stdout_log else None,
         "stderr_log": str(stderr_log) if stderr_log else None,
         "stdout_tail": tail_text(stdout_log) if stdout_log else "",

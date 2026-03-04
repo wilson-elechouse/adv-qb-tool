@@ -163,6 +163,7 @@ def build_chunk_job_report(path: Path, state, parsed):
     success_items = []
     failed_items = []
     pending_items = []
+    needs_user_action_items = []
 
     def record_meta(record_index):
         rec = record_lookup.get(int(record_index), {"record_index": record_index, "recap": {}})
@@ -224,14 +225,18 @@ def build_chunk_job_report(path: Path, state, parsed):
                 batch_summary = read_json(batch_summary_path)
                 for item in batch_summary.get("results", []):
                     ridx = int(item.get("record_index", 0))
-                    success_items.append({
+                    report_item = {
                         **record_meta(ridx),
                         "batch_index": batch.get("batch_index"),
                         "stage": "prepare",
                         "status": item.get("status") or batch_state.lower(),
                         "match_file": item.get("match_file"),
                         "unresolved": item.get("unresolved") or [],
-                    })
+                    }
+                    if report_item["unresolved"] or report_item["status"] == "needs_user_confirmation":
+                        needs_user_action_items.append(report_item)
+                    else:
+                        success_items.append(report_item)
                 continue
             except Exception:
                 pass
@@ -265,6 +270,12 @@ def build_chunk_job_report(path: Path, state, parsed):
         reason = str(item.get("reason") or "unknown_failure")
         failure_reason_summary[reason] = failure_reason_summary.get(reason, 0) + 1
 
+    can_auto_continue = (
+        state.get("state") == "WAIT_NEXT_BATCH"
+        and len(failed_items) == 0
+        and len(needs_user_action_items) == 0
+    )
+
     report = {
         "ok": state.get("state") != "ERROR",
         "mode": "chunked_job_report",
@@ -273,10 +284,13 @@ def build_chunk_job_report(path: Path, state, parsed):
         "success_count": len(success_items),
         "failed_count": len(failed_items),
         "pending_count": len(pending_items),
+        "needs_user_action_count": len(needs_user_action_items),
+        "can_auto_continue": can_auto_continue,
         "failure_reason_summary": failure_reason_summary,
         "success_items": success_items,
         "failed_items": failed_items,
         "pending_items": pending_items,
+        "needs_user_action_items": needs_user_action_items,
         "retry_hint": "python skills/adv-qbo-tool/scripts/retry_failed_chunk_job.py",
     }
     write_json(path, report)

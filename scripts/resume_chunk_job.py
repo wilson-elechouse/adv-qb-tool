@@ -8,6 +8,7 @@ from chunk_job_runtime import (
     read_json,
     resolve_default_search_root,
     launch_background,
+    write_json,
 )
 
 
@@ -44,6 +45,7 @@ def main():
     ap.add_argument("--workdir", help="explicit chunk-job workdir")
     ap.add_argument("--root", default=None, help="search root when --workdir is omitted; defaults to workspace tmp/adv-qbo")
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--auto-continue-seconds", type=int, default=10)
     ap.add_argument("--wait", action="store_true", help="wait for the resumed batch to finish instead of starting in background")
     args = ap.parse_args()
 
@@ -114,7 +116,16 @@ def main():
         print((p.stdout or "").strip())
         return
 
-    launch = launch_background(cmd, workdir, mode="resume")
+    plan_path = workdir / "driver_plan.resume.json"
+    write_json(plan_path, {"initial_command": cmd, "mode": "resume"})
+    driver_cmd = [
+        sys.executable,
+        str((Path(__file__).resolve().parent / "chunk_job_driver.py").resolve()),
+        "--workdir", str(workdir),
+        "--initial-command-file", str(plan_path.resolve()),
+        "--auto-continue-seconds", str(max(0, int(args.auto_continue_seconds))),
+    ]
+    launch = launch_background(driver_cmd, workdir, mode="resume")
     import json
     print(json.dumps({
         "ok": True,
@@ -122,6 +133,7 @@ def main():
         "workdir": str(workdir.resolve()),
         "state_file": str(state_path.resolve()),
         "next_action": "check_status_later",
+        "auto_continue_seconds": max(0, int(args.auto_continue_seconds)),
         **launch,
     }, ensure_ascii=False, indent=2))
 

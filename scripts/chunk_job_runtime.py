@@ -19,6 +19,20 @@ def write_json(path: Path, obj):
     path.write_text(json.dumps(obj, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
+def update_control(workdir: Path, **fields):
+    control_path = workdir / "job_control.json"
+    control = {}
+    if control_path.exists():
+        try:
+            control = read_json(control_path)
+        except Exception:
+            control = {}
+    control.update(fields)
+    control["updated_at"] = datetime.now().isoformat(timespec="seconds")
+    write_json(control_path, control)
+    return control_path
+
+
 def resolve_root(root_arg: str | None):
     if not root_arg:
         return DEFAULT_ROOT.resolve()

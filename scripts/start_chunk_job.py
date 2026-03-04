@@ -5,7 +5,7 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
-from chunk_job_runtime import WORKSPACE_ROOT, DEFAULT_ROOT, launch_background
+from chunk_job_runtime import DEFAULT_ROOT, launch_background, write_json
 
 
 def default_workdir():
@@ -30,6 +30,7 @@ def main():
     ap.add_argument("--rules-cache-dir")
     ap.add_argument("--rules-ttl-seconds", type=int, default=21600)
     ap.add_argument("--manual-rules-snapshot")
+    ap.add_argument("--auto-continue-seconds", type=int, default=10)
     ap.add_argument("--confirmed", action="store_true")
     ap.add_argument("--wait", action="store_true", help="wait for the first batch to finish instead of starting in background")
     args = ap.parse_args()
@@ -69,7 +70,16 @@ def main():
         print((p.stdout or "").strip())
         return
 
-    launch = launch_background(cmd, workdir, mode="start")
+    plan_path = workdir / "driver_plan.start.json"
+    write_json(plan_path, {"initial_command": cmd, "mode": "start"})
+    driver_cmd = [
+        sys.executable,
+        str((Path(__file__).resolve().parent / "chunk_job_driver.py").resolve()),
+        "--workdir", str(workdir),
+        "--initial-command-file", str(plan_path.resolve()),
+        "--auto-continue-seconds", str(max(0, int(args.auto_continue_seconds))),
+    ]
+    launch = launch_background(driver_cmd, workdir, mode="start")
     print(json.dumps({
         "ok": True,
         "mode": "start_chunk_job",
@@ -78,6 +88,7 @@ def main():
         "next_action": "check_status_later",
         "status_hint": "python skills/adv-qbo-tool/scripts/chunk_job_status.py",
         "resume_hint": "python skills/adv-qbo-tool/scripts/resume_chunk_job.py",
+        "auto_continue_seconds": max(0, int(args.auto_continue_seconds)),
         **launch,
     }, ensure_ascii=False, indent=2))
 

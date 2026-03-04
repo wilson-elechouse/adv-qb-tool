@@ -18,7 +18,8 @@ python skills/adv-qbo-tool/scripts/start_chunk_job.py \
   --file <uploaded.xlsx> \
   --bill-rules <bill_rules.json> \
   --chunk-size 10 \
-  --max-batches-per-run 1
+  --max-batches-per-run 1 \
+  --auto-continue-seconds 10
 ```
 
 Resume the latest waiting chunk job automatically:
@@ -64,6 +65,8 @@ Notes:
 - When source rows exceed `--chunk-size`, `workflow.py` now auto-splits records into per-batch chunk workdirs under `<workdir>/chunks/`.
 - `start_chunk_job.py` is the safe Telegram/chat entry because it launches the first bounded batch in background and returns immediately.
 - `--max-batches-per-run 1` is the safe setting for Telegram-triggered runs; `0` means process all remaining batches in one invocation.
+- If a batch finishes with no unresolved items and no failures, background driver auto-resumes the next batch after `--auto-continue-seconds` (default `10`).
+- If a batch finishes with unresolved items or failures, the job stops at `WAIT_NEXT_BATCH` and waits for explicit user input.
 - Chunk-job progress is written to:
   - `workflow_state.json`
   - `chunk_job_summary.json`

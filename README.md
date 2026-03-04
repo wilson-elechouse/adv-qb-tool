@@ -17,10 +17,15 @@ python scripts/workflow.py --file <uploaded.xlsx> --bill-rules <bill_rules.json>
 
 For large Excel files, keep each invocation bounded and resumable:
 ```bash
-python scripts/start_chunk_job.py --file <uploaded.xlsx> --bill-rules <bill_rules.json> --chunk-size 10 --max-batches-per-run 1
+python scripts/start_chunk_job.py --file <uploaded.xlsx> --bill-rules <bill_rules.json> --chunk-size 10 --max-batches-per-run 1 --auto-continue-seconds 10
 python scripts/resume_chunk_job.py
 python scripts/retry_failed_chunk_job.py
 ```
+
+Default large-file behavior:
+- process 10 rows per batch
+- if a batch has no unresolved items and no failures, auto-continue after 10 seconds
+- if a batch has unresolved items or failures, pause and wait for user input
 
 ## Local config
 For Collector connectivity, copy and adapt:

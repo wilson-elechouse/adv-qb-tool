@@ -124,13 +124,14 @@ python scripts/suggest_from_bill_rules.py --parsed <parsed.json> --bill-rules <b
   - parser outputs `records[]` (one record per approved row).
   - if row count > 10, process in chunks of 10 and loop until done.
   - For large Excel files, run bounded workflow batches instead of one long synchronous run:
-    - `python skills/adv-qbo-tool/scripts/start_chunk_job.py --file <uploaded.xlsx> --bill-rules <bill_rules.json> --chunk-size 10 --max-batches-per-run 1`
+    - `python skills/adv-qbo-tool/scripts/start_chunk_job.py --file <uploaded.xlsx> --bill-rules <bill_rules.json> --chunk-size 10 --max-batches-per-run 1 --auto-continue-seconds 10`
     - continue same job:
       - `python skills/adv-qbo-tool/scripts/resume_chunk_job.py`
     - or resume the most recent waiting chunk job:
       - `python skills/adv-qbo-tool/scripts/resume_chunk_job.py`
   - Do not block the chat waiting for a full large-file run to finish. Start in background, reply immediately with job-started status, then use status/resume helpers.
-  - If workflow returns `WAIT_NEXT_BATCH`, summarize the progress for the user and wait for an explicit continue signal before resuming.
+  - If workflow returns `WAIT_NEXT_BATCH` and the processed batch has no unresolved items and no failures, auto-continue after 10 seconds.
+  - If workflow returns `WAIT_NEXT_BATCH` with unresolved items or failures, summarize the progress for the user and wait for an explicit continue signal before resuming.
   - If the user says `继续`, `继续下一批`, or `go on`, prefer:
     - `python skills/adv-qbo-tool/scripts/chunk_job_status.py`
     - then `python skills/adv-qbo-tool/scripts/resume_chunk_job.py`

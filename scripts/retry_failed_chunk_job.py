@@ -62,6 +62,7 @@ def main():
     ap.add_argument("--workdir", help="explicit chunk-job workdir")
     ap.add_argument("--root", default=None, help="search root when --workdir is omitted; defaults to workspace tmp/adv-qbo")
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--auto-continue-seconds", type=int, default=10)
     ap.add_argument("--wait", action="store_true", help="wait for the retry run to finish instead of starting in background")
     args = ap.parse_args()
 
@@ -163,7 +164,16 @@ def main():
         print((p.stdout or "").strip())
         return
 
-    launch = launch_background(cmd, retry_dir, mode="retry-failed")
+    plan_path = retry_dir / "driver_plan.retry_failed.json"
+    write_json(plan_path, {"initial_command": cmd, "mode": "retry-failed"})
+    driver_cmd = [
+        sys.executable,
+        str((Path(__file__).resolve().parent / "chunk_job_driver.py").resolve()),
+        "--workdir", str(retry_dir),
+        "--initial-command-file", str(plan_path.resolve()),
+        "--auto-continue-seconds", str(max(0, int(args.auto_continue_seconds))),
+    ]
+    launch = launch_background(driver_cmd, retry_dir, mode="retry-failed")
     import json
     print(json.dumps({
         "ok": True,
@@ -173,6 +183,7 @@ def main():
         "failed_record_indexes": failed_indexes,
         "retry_parse": str(retry_parse_path.resolve()),
         "next_action": "check_status_later",
+        "auto_continue_seconds": max(0, int(args.auto_continue_seconds)),
         **launch,
     }, ensure_ascii=False, indent=2))
 
