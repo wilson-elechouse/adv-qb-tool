@@ -83,6 +83,13 @@ def _reason_tokens(text: str) -> List[str]:
     return _feature_tokens(" ".join(lines))
 
 
+def _short_error_text(err: Exception, max_chars: int = 180) -> str:
+    text = " ".join(str(err or "").split())
+    if len(text) <= max_chars:
+        return text
+    return text[:max_chars] + "..."
+
+
 def _build_reuse_features(pd01_text: str, pd02_text: str, reason: str) -> Dict[str, Any]:
     reason_toks = _reason_tokens(reason)
     return {
@@ -330,6 +337,8 @@ def main():
     reused_records = 0
     ai_total_duration_ms = 0.0
     estimated_saved_ai_duration_ms = 0.0
+    ai_failures = 0
+    ai_failure_records = []
     for r in records:
         record_started = time.perf_counter()
         recap = r.get("recap", {})
@@ -357,28 +366,48 @@ def main():
             hist = pick_history_examples(history_rows, pd01, pd02, reason, topk=max(1, args.history_topk)) if history_rows else []
             hist_count = len(hist)
             ai_started = time.perf_counter()
-            judged = ai_category_judge(
-                pd01,
-                pd02,
-                reason,
-                accounts,
-                ai_cmd=args.ai_cmd,
-                history_examples=hist,
-                allow_fallback=allow_fallback,
-            )
-            ai_duration_ms = round((time.perf_counter() - ai_started) * 1000.0, 2)
-            ai_calls += 1
-            ai_total_duration_ms += ai_duration_ms
-            judge_source = "ai"
-            reused_from_record_index = None
-            reuse_meta = None
-            if float(judged.confidence or 0) >= float(args.reuse_min_confidence):
-                reuse_cache.append({
+            try:
+                judged = ai_category_judge(
+                    pd01,
+                    pd02,
+                    reason,
+                    accounts,
+                    ai_cmd=args.ai_cmd,
+                    history_examples=hist,
+                    allow_fallback=allow_fallback,
+                )
+                ai_duration_ms = round((time.perf_counter() - ai_started) * 1000.0, 2)
+                ai_calls += 1
+                ai_total_duration_ms += ai_duration_ms
+                judge_source = "ai"
+                reused_from_record_index = None
+                reuse_meta = None
+                if float(judged.confidence or 0) >= float(args.reuse_min_confidence):
+                    reuse_cache.append({
+                        "record_index": r.get("record_index"),
+                        "features": features,
+                        "result": judged,
+                        "duration_ms": ai_duration_ms,
+                    })
+            except Exception as e:
+                ai_duration_ms = round((time.perf_counter() - ai_started) * 1000.0, 2)
+                ai_calls += 1
+                ai_total_duration_ms += ai_duration_ms
+                ai_failures += 1
+                err_text = _short_error_text(e)
+                ai_failure_records.append({
                     "record_index": r.get("record_index"),
-                    "features": features,
-                    "result": judged,
-                    "duration_ms": ai_duration_ms,
+                    "error": err_text,
                 })
+                judged = CategoryJudgeResult(
+                    category_ref_text="",
+                    confidence=0.0,
+                    top3=[],
+                    rationale=f"ai_error: {err_text}",
+                )
+                judge_source = "ai_error"
+                reused_from_record_index = None
+                reuse_meta = {"error": err_text}
 
         rr = dict(r)
         rr["category_ai"] = asdict(judged)
@@ -413,6 +442,8 @@ def main():
             "ai_avg_duration_ms": round(ai_total_duration_ms / max(1, ai_calls), 2) if ai_calls else 0.0,
             "record_avg_duration_ms": round(sum(x["duration_ms"] for x in per_record_metrics) / max(1, len(per_record_metrics)), 2) if per_record_metrics else 0.0,
             "estimated_saved_ai_duration_ms": round(estimated_saved_ai_duration_ms, 2),
+            "ai_failures": ai_failures,
+            "ai_failure_records": ai_failure_records[:10],
             "slowest_records": sorted(per_record_metrics, key=lambda x: x["duration_ms"], reverse=True)[:3],
         },
         "notes": "AI judge uses PD01+PD02+Reason joint semantics with optional history_examples context"

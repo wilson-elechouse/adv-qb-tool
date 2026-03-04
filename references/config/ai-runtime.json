@@ -7,7 +7,12 @@
   "session_id": "adv-qbo-ai-judge",
   "thinking": "low",
   "local": true,
+  "timeout_seconds": 180,
   "max_retries": 3,
+  "pd01_max_chars": 240,
+  "pd02_max_chars": 320,
+  "reason_max_chars": 220,
+  "option_label_max_chars": 72,
   "debug_dir": "tmp/adv-qbo/ai-bridge-debug",
   "notes": "Default uses local OpenClaw agent bridge. Stateless mode uses a fresh session id per call. Reads stdin JSON and returns strict JSON."
 }

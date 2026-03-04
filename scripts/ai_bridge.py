@@ -64,6 +64,82 @@ def _clip(s: str, n: int) -> str:
     return t if len(t) <= n else (t[:n] + "…")
 
 
+SEMANTIC_LABEL_HINTS = (
+    "payment type",
+    "which supplier",
+    "supplier",
+    "vendor",
+    "product",
+    "payment to",
+    "business unit",
+    "project type",
+    "belongs to",
+    "description",
+    "reason",
+)
+
+NOISE_LABEL_HINTS = (
+    "payment history",
+    "account name",
+    "account number",
+    "bank",
+    "total amount",
+    "gross amount",
+    "net amount",
+    "billing date",
+    "bill date",
+    "due date",
+    "period covered",
+    "request no",
+    "billing/soa no",
+    "feishu",
+    "currency",
+)
+
+
+def _compact_ws(text: str) -> str:
+    return " ".join(str(text or "").split())
+
+
+def _drop_payment_history(text: str) -> str:
+    return re.split(r"payment\s+history\s*:", str(text or ""), maxsplit=1, flags=re.IGNORECASE)[0]
+
+
+def _compact_structured_text(text: str, max_chars: int) -> str:
+    raw = _drop_payment_history(text)
+    raw = raw.replace("\r", "\n")
+    parts = [p.strip() for p in re.split(r"[|\n]+", raw) if str(p).strip()]
+    kept = []
+    for part in parts:
+        compact = _compact_ws(part)
+        lower = compact.lower()
+        label = lower.split(":", 1)[0].strip() if ":" in lower else ""
+        if label and any(h in label for h in NOISE_LABEL_HINTS):
+            continue
+        if label:
+            if any(h in label for h in SEMANTIC_LABEL_HINTS):
+                kept.append(compact)
+            continue
+        if sum(ch.isdigit() for ch in compact) > max(4, len(compact) // 4):
+            continue
+        kept.append(compact)
+    text_out = " | ".join(dict.fromkeys(kept)) if kept else _compact_ws(raw)
+    return _clip(text_out, max_chars)
+
+
+def _compact_reason(text: str, max_chars: int) -> str:
+    head = _drop_payment_history(text)
+    lines = []
+    for line in head.splitlines():
+        compact = _compact_ws(line)
+        if not compact:
+            continue
+        if "total" in compact.lower() and re.search(r"\d", compact):
+            continue
+        lines.append(compact)
+    return _clip(" | ".join(lines) if lines else _compact_ws(head), max_chars)
+
+
 def run_openclaw_agent(message: str, session_id: str, thinking: str = "low", timeout_sec: int = 120, local: bool = True, agent_id: str = ""):
     bin_name = resolve_openclaw_bin()
     safe_message = sanitize_for_cmd(message)
@@ -206,21 +282,26 @@ def main():
     task = payload.get("task", "category_judge")
     inputs = payload.get("inputs", {})
     max_retries = int(cfg.get("max_retries", 3) or 3)
+    timeout_sec = int(cfg.get("timeout_seconds", 180) or 180)
+    pd01_max_chars = int(cfg.get("pd01_max_chars", 240) or 240)
+    pd02_max_chars = int(cfg.get("pd02_max_chars", 320) or 320)
+    reason_max_chars = int(cfg.get("reason_max_chars", 220) or 220)
+    option_label_max_chars = int(cfg.get("option_label_max_chars", 72) or 72)
     debug_dir = str(cfg.get("debug_dir", "") or "")
 
     if task != "category_judge":
         raise RuntimeError(f"ai_bridge_unsupported_task:{task}")
 
-    pd01 = _clip(str(inputs.get("payment_detail_01_text", "")), 700)
-    pd02 = _clip(str(inputs.get("payment_detail_02_text", "")), 700)
-    reason = _clip(str(inputs.get("reason", "")), 350)
+    pd01 = _compact_structured_text(str(inputs.get("payment_detail_01_text", "")), pd01_max_chars)
+    pd02 = _compact_structured_text(str(inputs.get("payment_detail_02_text", "")), pd02_max_chars)
+    reason = _compact_reason(str(inputs.get("reason", "")), reason_max_chars)
     options = [str(x) for x in (inputs.get("options") or []) if str(x).strip()]
     # Step2 decision prompt: history disabled by request
 
     # prevent Windows command-line overflow: trim option payload size
     max_options = int(cfg.get("max_options", 80) or 80)
     options = options[:max_options]
-    short_options = [_clip(o, 90) for o in options]
+    short_options = [_clip(o, option_label_max_chars) for o in options]
 
     numbered = [{"no": i + 1, "label": str(o)} for i, o in enumerate(short_options)]
     option_lines = " ; ".join([f"{x['no']}) {x['label']}" for x in numbered])
@@ -253,7 +334,14 @@ def main():
                 f"Options: {json.dumps(numbered, ensure_ascii=False)}."
             )
 
-        out_text = run_openclaw_agent(prompt, session_id=session_id, thinking=thinking, local=local, agent_id=agent_id)
+        out_text = run_openclaw_agent(
+            prompt,
+            session_id=session_id,
+            thinking=thinking,
+            timeout_sec=timeout_sec,
+            local=local,
+            agent_id=agent_id,
+        )
         last_text = out_text
         write_debug(debug_dir, f"attempt{attempt}-raw", out_text)
 
@@ -317,7 +405,14 @@ def main():
                 f"INDEX DOMAIN: {idx_domain[:80]}{' ...' if len(idx_domain) > 80 else ''}. "
                 f"OPTIONS PREVIEW: {json.dumps(short, ensure_ascii=False)}"
             )
-            t = run_openclaw_agent(fix_prompt, session_id=session_id, thinking=thinking, local=local, agent_id=agent_id)
+            t = run_openclaw_agent(
+                fix_prompt,
+                session_id=session_id,
+                thinking=thinking,
+                timeout_sec=timeout_sec,
+                local=local,
+                agent_id=agent_id,
+            )
             write_debug(debug_dir, "corrective-raw", t)
             n3 = extract_first_int(t)
             if n3 is not None and 1 <= n3 <= len(options):
