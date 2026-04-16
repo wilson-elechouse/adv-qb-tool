@@ -1,4 +1,5 @@
 .system/
+dist/
 
 # ADV QB runtime outputs
 adv-qb-tool/tmp/

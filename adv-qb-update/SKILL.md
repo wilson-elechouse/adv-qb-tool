@@ -12,6 +12,7 @@ Use this skill to pull the latest Collector `bill-rules` into the local cache us
 Default local credential config:
 
 - `references/config/collector-config.local.json`
+- If the local file does not exist yet, copy `references/config/collector-config.template.json` and fill in the account credentials.
 
 Default local rules cache:
 
