@@ -1,0 +1,69 @@
+{
+  "version": "2026-04-15",
+  "tenant": "xnofi",
+  "sourceFieldGuide": {
+    "payment_type": "Prefers the Payment Type Excel column and falls back to Payment Details 01 -> Payment Type.",
+    "product": "Derived field from Payment Details 02 -> Product; not a direct Excel header.",
+    "vendor": "Derived from Payment Details 02 -> Which Supplier, with fallback to the vendor column when present.",
+    "reason": "Internal field mapped from the Reasons for payment Excel column.",
+    "payment_detail_02_text": "Raw full text captured from the Payment Details 02 Excel column."
+  },
+  "headerAliases": {
+    "location": [
+      "Location"
+    ],
+    "project_type": [
+      "Project Type"
+    ],
+    "belongs_to": [
+      "Belongs To"
+    ],
+    "reason": [
+      "Reasons for payment"
+    ],
+    "payment_type": [
+      "Payment Type"
+    ],
+    "payment_details_01": [
+      "Payment Details 01"
+    ],
+    "payment_details_02": [
+      "Payment Details 02"
+    ]
+  },
+  "outputFieldMappings": {
+    "vendor_ref_text": {
+      "relation": "equals",
+      "sourceFields": [
+        "vendor"
+      ],
+      "notes": "Direct vendor mapping from the parsed vendor field."
+    },
+    "location_ref_text": {
+      "relation": "equals",
+      "sourceFields": [
+        "location",
+        "project_type"
+      ],
+      "notes": "Try Location first, then Project Type as an alternate location source."
+    },
+    "class_ref_text": {
+      "relation": "equals",
+      "sourceFields": [
+        "belongs_to"
+      ],
+      "notes": "Belongs To maps directly to class/department selection."
+    },
+    "account_ref_text": {
+      "relation": "associated",
+      "sourceFields": [
+        "payment_type",
+        "product",
+        "reason",
+        "payment_detail_02_text",
+        "vendor"
+      ],
+      "notes": "payment_type prefers the Payment Type column and falls back to Payment Details 01 -> Payment Type; Payment Details 02 and Reasons for payment are primary evidence for account selection, while the other fields are supporting signals."
+    }
+  }
+}

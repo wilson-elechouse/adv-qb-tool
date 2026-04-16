@@ -1,0 +1,152 @@
+{
+  "version": "2026-02-21",
+  "tenant": "xnofi",
+  "policy": {
+    "confirmation_first": true,
+    "unknown_requires_user_confirmation": true,
+    "no_silent_default": true
+  },
+  "paymentTypeRules": {
+    "Payroll Payment- Xinofi": {
+      "category": "Employees-Salary/Payroll Expense",
+      "account": "5501 Payroll - Head Office",
+      "confidence": "user-confirmed"
+    },
+    "Purchase Supplier": {
+      "category": "Admin-Office Supplies",
+      "account": "Purchases",
+      "confidence": "user-confirmed"
+    },
+    "Mandatory Benefits": {
+      "category": "Employees-Benefits",
+      "account": "5502 Employee Benefits",
+      "confidence": "user-confirmed"
+    }
+  },
+  "keywordRules": [
+    {
+      "whenPaymentType": "Payroll Payment- Xinofi",
+      "matchAny": ["employees-salary xinofi", "salary xinofi", "payroll"],
+      "category": "Employees-Salary/Payroll Expense",
+      "account": "5501 Payroll - Head Office"
+    },
+    {
+      "whenPaymentType": "Payroll Payment- Xinofi",
+      "matchAny": ["manpower-employees salary xinofi", "manpower salary", "manpower-employees salary"],
+      "category": "Manpower-Payroll",
+      "account": "5505 Subcontractor - Head Office"
+    },
+    {
+      "whenPaymentType": "Mandatory Benefits",
+      "matchAny": ["mandatory benefits", "govert mandatory", "government mandatory", "sss", "philhealth", "hdmf"],
+      "category": "Employees-Benefits",
+      "account": "5502 Employee Benefits"
+    },
+    {
+      "whenPaymentType": "Admin Payment",
+      "matchAny": ["employees-benefits", "benefits", "allowance", "incentive"],
+      "category": "Employees-Benefits",
+      "account": "5503 Employee Benefits (Others)"
+    },
+    {
+      "whenPaymentType": "Other Payment",
+      "matchAny": ["communication", "load allowance", "admin-communicate", "internet", "phone"],
+      "category": "Admin-Communicate",
+      "account": "5205 COS - Communication"
+    },
+    {
+      "whenPaymentType": "Other Payment",
+      "matchAny": ["transport", "travel", "mototaxi", "lalamove"],
+      "category": "Admin-Transport",
+      "account": "5802 Travel Expenses"
+    },
+    {
+      "whenPaymentType": "Admin Payment",
+      "matchAny": ["consult", "consultancy", "consultant"],
+      "category": "Service-Consultancy",
+      "account": "5702 Consultancy Fee"
+    },
+    {
+      "whenPaymentType": "Admin Payment",
+      "matchAny": ["communication", "load allowance", "admin-communicate", "internet", "phone"],
+      "category": "Admin-Communicate",
+      "account": "5205 COS - Communication"
+    },
+    {
+      "whenPaymentType": "Admin Payment",
+      "matchAny": ["feishu", "quickbook", "quickbooks", "domain", "email", "subscription", "digital-"],
+      "category": "Admin-Office Supplies",
+      "account": "5402 Dues and subscriptions"
+    },
+    {
+      "whenPaymentType": "Admin Payment",
+      "matchAny": ["service-sec/city hall charge", "sec", "city hall", "permit", "registration", "notary"],
+      "category": "Service-Consultancy",
+      "account": "6103 Permit and License"
+    },
+    {
+      "whenPaymentType": "Admin Payment",
+      "matchAny": ["manpower-consultancy", "manpower consultancy"],
+      "category": "Manpower-Consultancy",
+      "account": "5505 Subcontractor - Head Office"
+    },
+    {
+      "whenPaymentType": "Admin Payment",
+      "matchAny": ["transport", "travel", "mototaxi", "driver fee"],
+      "category": "Admin-Transport",
+      "account": "5802 Travel Expenses"
+    },
+    {
+      "whenPaymentType": "Admin Payment",
+      "matchAny": ["office supplies", "supplies", "laptop", "desktop", "purchase", "printing", "booklet"],
+      "category": "Admin-Office Supplies",
+      "account": "5204 COS - Office Supplies"
+    },
+    {
+      "whenPaymentType": "Admin Payment",
+      "matchAny": ["training", "seminar"],
+      "category": "Training",
+      "account": "5503.2 Trainings, Entertainment and Dev. C"
+    },
+    {
+      "whenPaymentType": "Admin Payment",
+      "matchAny": ["digital-feishu", "digital-quickbook", "digital-emails/website", "website", "email", "subscription"],
+      "category": "Digital Services",
+      "account": "5402 Dues and subscriptions"
+    },
+    {
+      "whenPaymentType": "Finance Payment",
+      "matchAny": ["printing", "office supplies", "booklet"],
+      "category": "Admin-Office Supplies",
+      "account": "5204 COS - Office Supplies"
+    },
+    {
+      "whenPaymentType": "Other Payment",
+      "matchAny": ["training", "seminar"],
+      "category": "Training",
+      "account": "5503.2 Trainings, Entertainment and Dev. C"
+    }
+  ],
+  "fallback": {
+    "Admin Payment": {
+      "category": "Admin-Office Supplies",
+      "account": "5204 COS - Office Supplies",
+      "requiresReview": true
+    },
+    "Other Payment": {
+      "category": "Admin-Office Supplies",
+      "account": "5204 COS - Office Supplies",
+      "requiresReview": true
+    },
+    "Finance Payment": {
+      "category": "Admin-Office Supplies",
+      "account": "5204 COS - Office Supplies",
+      "requiresReview": true
+    },
+    "Mandatory Benefits": {
+      "category": "Employees-Benefits",
+      "account": "5502 Employee Benefits",
+      "requiresReview": true
+    }
+  }
+}

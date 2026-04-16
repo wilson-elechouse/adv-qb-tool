@@ -1,0 +1,4 @@
+interface:
+  display_name: "ADV QB Tool"
+  short_description: "Run the ADV QB payment workflow"
+  default_prompt: "Run, inspect, and troubleshoot the ADV QB workflow bundle for payment-request Excel files, bill rules, chunked jobs, and output logs."

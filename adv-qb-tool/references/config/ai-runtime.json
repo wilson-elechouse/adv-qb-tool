@@ -1,0 +1,19 @@
+{
+  "profile": "codex",
+  "ai_cmd": "",
+  "required": false,
+  "stateless": true,
+  "agent_id": "",
+  "session_prefix": "",
+  "session_id": "",
+  "thinking": "low",
+  "local": true,
+  "timeout_seconds": 180,
+  "max_retries": 1,
+  "pd01_max_chars": 240,
+  "pd02_max_chars": 320,
+  "reason_max_chars": 220,
+  "option_label_max_chars": 72,
+  "debug_dir": "tmp/adv-qbo/ai-bridge-debug",
+  "notes": "Default runtime. External AI is optional; Codex-oriented entrypoints can still enforce a final review gate before confirmation."
+}

@@ -1,0 +1,17 @@
+.system/
+
+# ADV QB runtime outputs
+adv-qb-tool/tmp/
+adv-qb-tool/output/
+
+# Local credentials and machine-specific config
+adv-qb-tool/references/config/*.local.json
+adv-qb-update/references/config/*.local.json
+
+# Python cache
+**/__pycache__/
+**/*.pyc
+
+# OS/editor noise
+.DS_Store
+Thumbs.db

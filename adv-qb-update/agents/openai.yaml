@@ -1,0 +1,4 @@
+interface:
+  display_name: "ADV QB Update"
+  short_description: "Refresh local ADV QB rules from Collector"
+  default_prompt: "Update the local ADV QB bill-rules cache from Collector, verify the refresh result, and report the new snapshot and latest.json paths."

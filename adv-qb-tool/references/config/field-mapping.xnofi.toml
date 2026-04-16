@@ -1,0 +1,43 @@
+version = "2026-04-15"
+tenant = "xnofi"
+
+# Manual maintenance guide:
+# 1. Edit [excel_columns] when an Excel title changes.
+# 2. Edit [outputs.<name>] when a bill target field should use different source fields.
+# 3. relation = "equals" means direct matching.
+# 4. relation = "associated" means the listed source_fields are combined as matching evidence.
+# 5. source_fields are recap/internal fields. Some come from Excel headers, some are derived:
+#    payment_type <- Payment Type column, fallback to Payment Details 01 -> Payment Type
+#    product <- Payment Details 02 -> Product
+#    vendor <- Payment Details 02 -> Which Supplier (or vendor column fallback)
+#    payment_detail_02_text <- full raw Payment Details 02 text
+# 6. category inherits account by default. Add [outputs.category] only when it must differ.
+
+[excel_columns]
+location = ["Location"]
+project_type = ["Project Type"]
+belongs_to = ["Belongs To"]
+reason = ["Reasons for payment"]
+payment_type = ["Payment Type"]
+payment_details_01 = ["Payment Details 01"]
+payment_details_02 = ["Payment Details 02"]
+
+[outputs.vendor]
+relation = "equals"
+source_fields = ["vendor"]
+notes = "Direct vendor mapping from the parsed vendor field."
+
+[outputs.location]
+relation = "equals"
+source_fields = ["location", "project_type"]
+notes = "Try Location first, then Project Type as an alternate location source."
+
+[outputs.class]
+relation = "equals"
+source_fields = ["belongs_to"]
+notes = "Belongs To maps directly to class or department selection."
+
+[outputs.account]
+relation = "associated"
+source_fields = ["payment_type", "product", "reason", "payment_detail_02_text", "vendor"]
+notes = "payment_type prefers the Payment Type column and falls back to Payment Details 01 -> Payment Type; Payment Details 02 and Reasons for payment are the main evidence for account selection."
